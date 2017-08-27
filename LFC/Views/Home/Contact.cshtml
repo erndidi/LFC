@@ -1,0 +1,61 @@
+﻿@model LFC.Models.Contact
+
+@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-left:120px">
+    <div class="col-md-5" >
+        <div class="form-area" style="background-color:#FFD82F;box-shadow">
+            @using (Html.BeginForm("SendEmail", "Home", FormMethod.Post,new { @id = "contactForm" }))
+            {
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" value=@Model.Name placeholder="Name" >
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" value=@Model.EmailAddress placeholder="Email" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="phone" name="phone" value=@Model.Phone placeholder="Mobile Number" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" name="subject"  value=@Model.Subject placeholder="How can LFC help my business?" >
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7">@Model.Message</textarea>
+                   @* <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>*@
+                </div>
+
+                <button type="submit" id="submit" name="submit" style="background-color:#0C0C0C" class="btn btn-primary pull-right">Submit Form</button>
+            }
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $().ready(function () {
+       
+
+            $('#contactForm').validate({
+                rules: {
+                    name: "required",
+                    email: "required",
+                    subject: "required",
+                    message: "required"
+                },
+                messages: {
+                    name: "At least a first name, please.",
+                    email: "Please enter a valid email where I can reach you.",
+                    subject: "Subject required.",
+                    message: "Please tell me briefly what I can do for you. "
+                }
+            });
+
+        
+    });
+
+  
+
+    
+</script>
