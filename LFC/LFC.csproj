@@ -443,6 +443,8 @@
     <Content Include="js\node_modules\ui\node_modules\std\utf8_encode.js" />
     <Content Include="js\node_modules\ui\node_modules\std\waitFor.js" />
     <Content Include="js\node_modules\ui\node_modules\std\xhr.js" />
+    <Content Include="Content\Sell your business by selling your story.pdf" />
+    <Content Include="Content\files\Sell_your_story.pdf" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
@@ -478,6 +480,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
     <Content Include="Views\Home\SuccessPage.cshtml" />
     <Content Include="Views\Contact\RenderReportContactForm.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

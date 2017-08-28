@@ -43,7 +43,7 @@ namespace LFC.Controllers
         //}
 
         [HttpPost]
-        public async Task SendEmail(string first_name, string last_name, string email, string phone, string address, string city,string state, string zip, string msg)
+        public async Task<ActionResult> SendEmail(string first_name, string last_name, string email, string phone, string address, string city,string state, string zip, string msg)
         {
 
             await Task.Run(() =>
@@ -59,8 +59,8 @@ namespace LFC.Controllers
                 //SmtpClient client = new SmtpClient();
                 //client.Send(message);
             });
-           
-            RedirectToAction("SuccessPage", "Home");
+
+            return File("~/Content/files/Sell_your_story.pdf", "application/pdf");
 
 
         }
