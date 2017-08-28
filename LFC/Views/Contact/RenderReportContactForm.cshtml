@@ -1,9 +1,7 @@
 ﻿@model LFC.Models.Contact
 
-@{
-     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<form class="well form-horizontal blueBox" action="'@Url.Action("Contact","Home")'" method="post" id="contact_form">
+
+<form class="well form-horizontal blueBox" action="@Url.Action("SendEmail","Contact")" method="post" id="contact_form">
     <fieldset>
 
         <!-- Form Name -->
@@ -16,7 +14,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="first_name" placeholder="First Name" class="form-control" type="text">
+                    <input name="first_name" placeholder="First Name" @*value=@Model.FirstName*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -26,7 +24,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                    <input name="last_name" placeholder="Last Name" @*value=@Model.LastName*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -37,7 +35,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                    <input name="email" placeholder="E-Mail Address" @*value=@Model.EmailAddress*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -50,7 +48,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                    <input name="phone" placeholder="(845)555-1212" @*value=@Model.Phone*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -62,7 +60,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="address" placeholder="Address" class="form-control" type="text">
+                    <input name="address" placeholder="Address" @*value=@Model.Address*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -74,7 +72,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="city" placeholder="city" class="form-control" type="text">
+                    <input name="city" placeholder="city" @*value=@Model.City*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
@@ -151,39 +149,15 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="zip" placeholder="Zip Code" class="form-control" type="text">
+                    <input name="zip" placeholder="Zip Code" @*value=@Model.Zip*@ class="form-control" type="text">
                 </div>
             </div>
         </div>
 
         <!-- Text input-->
-        <div class="form-group">
+     
 
-            <div class="inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                    <input name="website" placeholder="Website or domain name" class="form-control" type="text">
-                </div>
-            </div>
-        </div>
-
-        <!-- radio checks -->
-        @*<div class="form-group">
-                <label class="col-md-4 control-label">Do you have hosting?</label>
-                <div class="col-md-4">
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="hosting" value="yes" /> Yes
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="hosting" value="no" /> No
-                        </label>
-                    </div>
-                </div>
-            </div>*@
-
+      
         <!-- Text area -->
 
         <div class="form-group">
@@ -191,7 +165,8 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                    <textarea class="form-control" name="message" placeholder="Project Description"></textarea>
+                  @*  @Html.TextArea("Message", @Model.Message  , new { @class = "form-control" })*@
                 </div>
             </div>
         </div>
@@ -203,7 +178,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4">
-                <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                <button type="submit" id="btnSubmit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
             </div>
         </div>
 
@@ -213,27 +188,72 @@
 
 <script type="text/javascript">
     $().ready(function () {
-       
 
-            $('#contactForm').validate({
-                rules: {
-                    name: "required",
-                    email: "required",
-                    subject: "required",
-                    message: "required"
+        $('#btnSubmit').click(function () {
+            var $form = $(btnClicked).parents('form');
+            var _url = '@Url.Action("SendEmail", "Contact")';
+            $.ajax({
+                type: "POST",
+                //url: $form.attr('action'),
+                url: _url,
+                data: $form.serialize(),
+                error: function (xhr, status, error) {
+                    //do something about the error
                 },
-                messages: {
-                    name: "At least a first name, please.",
-                    email: "Please enter a valid email where I can reach you.",
-                    subject: "Subject required.",
-                    message: "Please tell me briefly what I can do for you. "
+                success: function (response) {
+                    //do something with response
+                    $('#success_message').show();
+                    $('#success_message').fadeOut(5000);
+
                 }
             });
 
-        
+            return false; 
+        });
+
+        $('#contact_form').validate(
+            {
+                rules: {
+                    first_name: {
+                        minlength: 2,
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                    //message: {
+                    //    minlength: 2,
+                    //    required: true
+                    //}
+                },
+                highlight: function (element) {
+                    $(element).closest('.control-group').removeClass('success').addClass('error');
+                },
+                //success: function (element) {
+                //    element
+                //        .text('OK!').addClass('valid')
+                //        .closest('.control-group').removeClass('error').addClass('success');
+                //},
+
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                //submitHandler: function (form) {
+                //    form.submit();
+                //}
+
+            });
+           
+
+
     });
 
-  
+    function validateForm() {
+      
+    }
 
-    
+
+
+
+
 </script>

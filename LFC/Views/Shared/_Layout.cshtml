@@ -4,52 +4,61 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-   
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+
+    @*  <link href="../../Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
     <link href="../../Content/app.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-   
-  
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+
 </head>
 <body>
 
-        @*<nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header" role="navigation">*@
-            
-  
-    <div class="container-fluid container-sm-height">
+
+    @*<nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header" role="navigation">*@
+
+
+
         <div class="jumbotron text-center">
             <div class="row">
                 <img src="~/Content/logo.png" />
             </div>
-         
+            <div>
+                <article><h4>Health care software, email marketing...</h4></article>
+            </div>
+
 
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <h3>Column 1</h3>
-                    <p>Lorem ipsum dolor..</p>
-                    <p>Ut enim ad..</p>
-                </div>
-                <div class="col-sm-6">
-                   @RenderBody()
-                </div>
-                <div class="col-sm-4">
-                    <h3>Column 3</h3>
-                    <p>Lorem ipsum dolor..</p>
-                    <p>Ut enim ad..</p>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1" style="padding-right:30px">
+                <ul style="list-style:none">
+                    <li>@Html.ActionLink("Home","Index","Home")</li>                   
+                    <li>Contact</li>
+                    <li>Services</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px">
+                @RenderBody()
+            </div>
+            <div class="col-sm-4" style="padding-right:40px">
+                @Html.Partial("~/Views/Contact/RenderReportContactForm.cshtml")
+           
             </div>
         </div>
-                
-            
-      
-    </div>>
-    <footer class="container-fluid">
-      
-    </footer>
-  @*  <script src="~/Scripts/classie.js"></script>*@ 
-   @* <script src="~/Scripts/cbpAnimatedHeader.js"></script>*@
+    </div>
+
+
+
+
+    @*<footer class="container-fluid">
+
+        </footer>*@
+    @*  <script src="~/Scripts/classie.js"></script>*@
+    @* <script src="~/Scripts/cbpAnimatedHeader.js"></script>*@
 </body>
 </html>

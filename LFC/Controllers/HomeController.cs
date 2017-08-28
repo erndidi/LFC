@@ -27,18 +27,11 @@ return View();
             return View(contact);
         }
         [HttpPost]
-        public void SendEmail(Contact contact) 
+    
+
+        public ActionResult SuccessPage()
         {
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress(contact.EmailAddress);
-
-            message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
-
-            message.Subject = contact.Subject;
-            message.Body = contact.Message;
-
-            SmtpClient client = new SmtpClient();
-            client.Send(message);
+            return View();
         }
     }
 }
