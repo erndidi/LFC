@@ -22,8 +22,8 @@
 
 
         <div class="jumbotron text-center">
-            <div class="row">
-                <img src="~/Content/logo.png" />
+            <div class="row">               
+                <img src="~/Content/Logo_integral_messaging.png" />
             </div>
             <div>
                 <article><h4>Health care software, email marketing...</h4></article>
@@ -33,7 +33,7 @@
         </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-1" style="padding-right:30px">
+            <div class="col-sm-1" style="margin-left:10px;margin-right:40px">
                 <ul style="list-style:none">
                     <li>@Html.ActionLink("Home","Index","Home")</li>                   
                     <li>Contact</li>
@@ -45,7 +45,7 @@
             <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px">
                 @RenderBody()
             </div>
-            <div class="col-sm-4" style="padding-right:40px">
+            <div class="col-sm-4">
                 @Html.Partial("~/Views/Contact/RenderReportContactForm.cshtml")
            
             </div>
