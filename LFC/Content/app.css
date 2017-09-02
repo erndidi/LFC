@@ -241,7 +241,7 @@ article {
     float: none;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .container-sm-height {
         display: table;
         padding-left: 0px;
@@ -273,9 +273,9 @@ article {
         display: table-cell;
         float: none;
     }
-}
+}*/
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .container-lg-height {
         display: table;
         padding-left: 0px;
@@ -289,5 +289,5 @@ article {
     .col-lg-height {
         display: table-cell;
         float: none;
-    }
+    }*/
 }

@@ -33,5 +33,10 @@ return View();
         {
             return View();
         }
+
+        public ActionResult Services()
+        {
+            return View();
+        }
     }
 }

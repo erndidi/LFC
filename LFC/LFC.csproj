@@ -163,6 +163,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MarketingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -447,6 +448,7 @@
     <Content Include="js\node_modules\ui\node_modules\std\xhr.js" />
     <Content Include="Content\Sell your business by selling your story.pdf" />
     <Content Include="Content\files\Sell_your_story.pdf" />
+    <Content Include="Samples\DirectMail\Show your kids where money grows .docx" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
@@ -484,10 +486,14 @@
     <Content Include="Views\Contact\RenderReportContactForm.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Marketing\EmailMarketing.cshtml" />
+    <Content Include="Views\Marketing\DirectMail.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="js\etc\" />
+    <Folder Include="Samples\Email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

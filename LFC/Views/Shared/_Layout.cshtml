@@ -7,10 +7,11 @@
 
     @*  <link href="../../Content/bootstrap.min.css" rel="stylesheet" />*@
     <link href="~/css/bootstrap.css" rel="stylesheet" />
-    <link href="../../Content/app.css" rel="stylesheet" />
+    @* <link href="../../Content/app.css" rel="stylesheet" />*@
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 
 
 </head>
@@ -21,33 +22,37 @@
 
 
 
-        <div class="jumbotron text-center">
-            <div class="row">               
-                <img src="~/Content/Logo_integral_messaging.png" />
-            </div>
-            <div>
-                <article><h4>Health care software, email marketing...</h4></article>
-            </div>
-
-
-        </div>
-    <div class="container">
+    <div class="container-fluid text-center">
         <div class="row">
-            <div class="col-sm-1" style="margin-left:10px;margin-right:40px">
+           <h1 class="impact">Integral Messaging</h1>
+        </div>
+        <div>
+            <article><h4>Health care software, email marketing...</h4></article>
+        </div>
+
+
+    </div>
+    <div class="row blackBorder" style="height:4px">
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1" style="margin-left:10px;margin-right:40px; padding-top:15px">
                 <ul style="list-style:none">
-                    <li>@Html.ActionLink("Home","Index","Home")</li>                   
-                    <li>Contact</li>
+                    <li>@Html.ActionLink("Home", "Index","Home", null, new { type = "button" },new{@class="btn")</li>
                     <li>Services</li>
-                    <li>Blog</li>
+                    <li>About Me</li>
+                    <li></li>
+                   @* <li>Blog</li>*@
                 </ul>
             </div>
 
-            <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px">
+            <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px;padding-top:15px">
                 @RenderBody()
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" style="margin-right:0; padding-top:15px">
                 @Html.Partial("~/Views/Contact/RenderReportContactForm.cshtml")
-           
+
             </div>
         </div>
     </div>
