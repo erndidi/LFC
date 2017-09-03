@@ -38,19 +38,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-1" style="margin-left:10px;margin-right:40px; padding-top:15px">
-                <ul style="list-style:none">
-                    <li>@Html.ActionLink("Home", "Index","Home", null, new { type = "button" },new{@class="btn")</li>
-                    <li>Services</li>
-                    <li>About Me</li>
-                    <li></li>
-                   @* <li>Blog</li>*@
-                </ul>
+              
+                <p>@Html.ActionLink("Home", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
+                <p>@Html.ActionLink("Services", "Services", "Home", new { type = "button" }, new { @class = "btn" })</p>
+                <p>@Html.ActionLink("Blog", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
+               
             </div>
+           
 
             <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px;padding-top:15px">
                 @RenderBody()
             </div>
-            <div class="col-sm-4" style="margin-right:0; padding-top:15px">
+            <div class="col-sm-4" style="margin-right:0; margin-left:25px; padding-top:15px">
                 @Html.Partial("~/Views/Contact/RenderReportContactForm.cshtml")
 
             </div>
@@ -65,5 +64,9 @@
         </footer>*@
     @*  <script src="~/Scripts/classie.js"></script>*@
     @* <script src="~/Scripts/cbpAnimatedHeader.js"></script>*@
+    <script type="text/javascript">
+        var elem = ["Email Marketing", "Direct Mail", "BMW"];
+    </script>
 </body>
+
 </html>
