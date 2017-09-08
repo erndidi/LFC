@@ -1,4 +1,4 @@
-﻿/*!
+﻿/*
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -12,8 +12,7 @@ html {
 }
 body {
     margin: 0;
-   
-
+    background-image: url('../Content/background.png');
 }
 article,
 aside,
@@ -238,9 +237,8 @@ th {
   select {
     background: #fff !important;
   }
-  .navbar {
-    display: none;
-  }
+  
+   
   .table td,
   .table th {
     background-color: #fff !important;
@@ -740,8 +738,8 @@ pre code {
 .container {
   /*padding-right: 15px;
   padding-left: 15px;*/
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 /*@media (min-width: 768px) {
   .container {
@@ -761,8 +759,8 @@ pre code {
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 .row {
   margin-right: -15px;
@@ -3111,8 +3109,8 @@ input[type="button"].btn-block {
   left: auto;
 }
 .nav{
-    border:1px solid #ccc;
-    border-width:1px 0;
+    /*border:1px solid #ccc;
+    border-width:1px 0;*/
     list-style:none;
     margin:0;
     padding:0;
@@ -3121,10 +3119,13 @@ input[type="button"].btn-block {
 .nav li{
     display:inline;
 }
-.nav a{
-    display:inline-block;
-    padding:10px;
-}
+    .nav a {
+        display: inline-block;
+        color: #014d6f;
+        font-weight: bolder;
+        font-size: 16px;
+        text-shadow: 4px 4px 4px #aaa;
+    }
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -3444,11 +3445,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }.nav{
-    border:1px solid #ccc;
-    border-width:1px 0;
+    /*border:1px solid #ccc;*/
+    /*border-width:1px 0;*/
     list-style:none;
     margin:0;
-    padding:0;
+    padding:10px;
     text-align:center;
 }
 .nav li{
@@ -3470,10 +3471,22 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
-  position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+    position: relative;
+    min-height: 50px;
+    /* IE10+ */
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+    /* Opera */
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, #fceabb), color-stop(50, #FCCD4D), color-stop(100, #fbdf93));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+    /* W3C Markup */
+    background-image: radial-gradient(ellipse farthest-corner at center, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+    color: white;
+    /*border: 1px solid transparent;*/
 }
 @media (min-width: 768px) {
   .navbar {
@@ -3550,7 +3563,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav1 a{
     display:inline-block;
     padding-right:75px;
-    color:#0C0C0C;
+    color:white;
     font-weight:600;
 }
 .breadcrumb {
@@ -5266,7 +5279,7 @@ button.close {
 }
 
 .impact {
-    font-family: Josefin Sans script=all rev=1;
+    font-family: Josefin Sans;
     font-weight:bold;
     color: #5429FF;
 }
@@ -5353,11 +5366,62 @@ a[type="button"] {
     min-height: 100vh;
 }
 
-.artcl{
-margin-left:10px;
-margin-right:10px;
+.artcl {
+    color: black;
+    background-color: #def8f9;
+    font-size: 18px;
+    font-family: 'Raleway';
+    font-weight:bold;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .secondFont {
     color: #ffd82f;
+    font-family:'Raleway';
+}
+
+.headline {
+    font-family: 'Spectral', serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #E37222;
+    text-shadow: 4px 4px 4px #aaa;
+    letter-spacing: 3px;
+    font-effect-crackle;
+    text-align:center;
+}
+
+.headline2 {
+    font-family: 'Droid Serif';
+    font-weight: bold;
+    font-size: 16px;
+    color: #014d6f;
+
+}
+
+.header {
+    background-color: #fafafa;
+}
+
+
+
+.spaceDiv {
+
+    background: -moz-linear-gradient(179deg, rgba(35,23,255,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,128,128,1)), color-stop(100%, rgba(35,23,255,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(179deg, rgba(35,23,255,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(179deg, rgba(35,23,255,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(179deg, rgba(35,23,255,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
+    background: linear-gradient(271deg, rgba(35,23,255,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#2317FF',GradientType=1 ); /* ie6-9 */
+
+    height:900px;  ;
+}
+
+.marquee {
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
 }

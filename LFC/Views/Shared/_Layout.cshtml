@@ -8,10 +8,13 @@
     @*  <link href="../../Content/bootstrap.min.css" rel="stylesheet" />*@
     <link href="~/css/bootstrap.css" rel="stylesheet" />
     @* <link href="../../Content/app.css" rel="stylesheet" />*@
+    <link href="https://fonts.googleapis.com/css?family=Spectral&effect=brick-sign" rel="stylesheet">
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script src="~/Scripts/jquery.lettering-0.6.1.min.js"></script>
+    <script src="~/Scripts/jquery.textillate.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway">
 
 
 </head>
@@ -22,50 +25,69 @@
 
 
 
-    <div class="container-fluid text-center">
+    <div class="container">
         <div class="row">
-           <h1 class="impact">Integral Messaging</h1>
-        </div>
-        <div>
-            <article><h4>Health care software, email marketing...</h4></article>
-        </div>
+            <div class="col-sm-2">
+            </div>
 
+            <div class="col-sm-8">
 
-    </div>
-    <div class="row blackBorder" style="height:4px">
-
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-1" style="margin-left:10px;margin-right:40px; padding-top:15px">
-              
-                <p>@Html.ActionLink("Home", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
-                <p>@Html.ActionLink("Services", "Services", "Home", new { type = "button" }, new { @class = "btn" })</p>
-                <p>@Html.ActionLink("Blog", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
+                <div class="row text-center header headline">
+                   Integral Messaging 
+                   
+                </div>
                
-            </div>
-           
+                <div class="row">
+                    @*<p>@Html.ActionLink("Home", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
+                        <p>@Html.ActionLink("Services", "Services", "Home", new { type = "button" }, new { @class = "btn" })</p>
+                        <p>@Html.ActionLink("Blog", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>*@
+                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Services", "Index", "Home")</li>
+                            </ul>
+                        </div>
+                    </nav>
 
-            <div class="col-sm-6" style="border-top:0; border-bottom:0; border-left:4px; border-right:4px; border-style:inset; margin-left:20px;padding-top:15px">
-                @RenderBody()
-            </div>
-            <div class="col-sm-4" style="margin-right:0; margin-left:25px; padding-top:15px">
-                @Html.Partial("~/Views/Contact/RenderReportContactForm.cshtml")
+                </div>
+                <div class="row artcl">
+                    @RenderBody()
+                </div>
 
             </div>
+            <div class="col-sm-2"></div>
+
+
         </div>
     </div>
 
 
 
 
-    @*<footer class="container-fluid">
 
-        </footer>*@
-    @*  <script src="~/Scripts/classie.js"></script>*@
-    @* <script src="~/Scripts/cbpAnimatedHeader.js"></script>*@
+
+
+
+
+
     <script type="text/javascript">
-        var elem = ["Email Marketing", "Direct Mail", "BMW"];
+        $(document).ready(function () {
+            $('.marquee').marquee({
+                //speed in milliseconds of the marquee
+                duration: 5000,
+                //gap in pixels between the tickers
+                gap: 50,
+                //time in milliseconds before the marquee will start animating
+                delayBeforeStart: 0,
+                //'left' or 'right'
+                direction: 'left',
+                //true or false - should the marquee be duplicated to show an effect of continues flow
+                duplicated: true
+            });
+        });
     </script>
 </body>
 
