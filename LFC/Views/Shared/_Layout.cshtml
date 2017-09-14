@@ -8,17 +8,18 @@
     @*  <link href="../../Content/bootstrap.min.css" rel="stylesheet" />*@
     <link href="~/css/bootstrap.css" rel="stylesheet" />
     @* <link href="../../Content/app.css" rel="stylesheet" />*@
-    <link href="https://fonts.googleapis.com/css?family=Spectral&effect=brick-sign" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&effect=shadow-multiple" rel="stylesheet">
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.lettering-0.6.1.min.js"></script>
     <script src="~/Scripts/jquery.textillate.js"></script>
+    <script src="~/Scripts/jquery.marquee.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway">
 
 
 </head>
-<body>
+<body style="background-color:white">
 
 
     @*<nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header" role="navigation">*@
@@ -26,68 +27,81 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
+        <div class="jumbotron">
+            <div class="row text-center header">
+                <h1 class="headline font-effect-brick-sign" style="color:#0c00f2">Integral Messaging </h1>
             </div>
-
-            <div class="col-sm-8">
-
-                <div class="row text-center header headline">
-                   Integral Messaging 
-                   
-                </div>
+            <div class="row headline2">
                
-                <div class="row">
-                    @*<p>@Html.ActionLink("Home", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
-                        <p>@Html.ActionLink("Services", "Services", "Home", new { type = "button" }, new { @class = "btn" })</p>
-                        <p>@Html.ActionLink("Blog", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>*@
-                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                        <div class="container-fluid">
-                            <ul class="nav navbar-nav">
-                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                                <li>@Html.ActionLink("About", "About", "Home")</li>
-                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Services", "Index", "Home")</li>
-                            </ul>
-                        </div>
-                    </nav>
+                   <h4 id="secHeadLine" style="color:#0c00f2"></h4>
+                
+            </div>
+            <div class="row">
 
-                </div>
-                <div class="row artcl">
-                    @RenderBody()
-                </div>
+
+                @*<p>@Html.ActionLink("Home", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>
+            <p>@Html.ActionLink("Services", "Services", "Home", new { type = "button" }, new { @class = "btn" })</p>
+            <p>@Html.ActionLink("Blog", "Index", "Home", new { type = "button" }, new { @class = "btn", @style = "width:120px" })</p>*@
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="dropdown">
+
+                                @Html.ActionLink("Services", "Index", "Home",new { @class = "dropdown-toggle data-toggle" })
+                            </li>
+                            <li></li>
+                            <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                           
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+                    <div class="row artcl">
+                        @RenderBody()
+                    </div>
+              
+               
+
 
             </div>
-            <div class="col-sm-2"></div>
 
 
         </div>
+
+     
+   
+    <div id="divSecHeadline" style="display:none">
+        Email Marketing, Software Copywriting,White Papers, Will Work on Spec, Tell Story
     </div>
 
 
-
-
-
-
-
-
-
-
     <script type="text/javascript">
+        var secondHeadTxt = $('#divSecHeadline').text().split(',');
+        var lastUsed = secondHeadTxt.length + 1;;
+        var idx = GetRand();
         $(document).ready(function () {
-            $('.marquee').marquee({
-                //speed in milliseconds of the marquee
-                duration: 5000,
-                //gap in pixels between the tickers
-                gap: 50,
-                //time in milliseconds before the marquee will start animating
-                delayBeforeStart: 0,
-                //'left' or 'right'
-                direction: 'left',
-                //true or false - should the marquee be duplicated to show an effect of continues flow
-                duplicated: true
-            });
+            ShowSecondHeadline();
         });
+
+        function ShowSecondHeadline() {
+            idx = GetRand();           
+            $('#secHeadLine').text(secondHeadTxt[idx]);
+                $('#secHeadLine').fadeIn(2000, function () {
+                    $('#secHeadLine').fadeOut(2000, function () {
+                        lastUsed = idx;
+                        ShowSecondHeadline();
+                    })
+                });
+        }
+
+        function GetRand() {
+            return Math.floor(Math.random() * (secondHeadTxt.length - 1));
+        }
+        
     </script>
 </body>
 
