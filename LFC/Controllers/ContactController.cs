@@ -22,48 +22,48 @@ namespace LFC.Controllers
             Contact model = new Contact();
             return View(model);
         }
-        
-       
-        //[HttpPost]
-        //public void SendEmail(Contact contact)
-        //{
-        //    //MailMessage message = new MailMessage();
-        //    //message.From = new MailAddress(contact.EmailAddress);
 
-        //    //message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
-
-        //    //message.Subject = string.Concat("A potential client has registered: ", contact.Subject);
-        //    //message.Body = contact.Message;
-
-        //    //SmtpClient client = new SmtpClient();
-        //    //client.Send(message);
-
-        //    RedirectToAction("SuccessPage", "Home");
-
-        //}
 
         [HttpPost]
-        public async Task<ActionResult> SendEmail(string first_name, string last_name, string email, string phone, string address, string city,string state, string zip, string msg)
+        public ActionResult SendEmail(Contact contact)
         {
+            //MailMessage message = new MailMessage();
+            //message.From = new MailAddress(contact.EmailAddress);
 
-            await Task.Run(() =>
-            {
-                //MailMessage message = new MailMessage();
-                //message.From = new MailAddress(email);
+            //message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
 
-                //message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+            //message.Subject = string.Concat("A potential client has registered: ", contact.Subject);
+            //message.Body = contact.Message;
 
-                //message.Subject = "A potential client has registered: ";
-                //message.Body = string.Concat("<p>First Name: ", first_name, "</p><p> Name: ", last_name, "</p><p>Email: ", email, "</p><p>Phone: ", phone, "</p><p>Address: ", address, "</p><p>City: ", city, "</p><p>State: ", state, "</p><p>Zip: ", zip, "</p><p>Message: ", msg);
+            //SmtpClient client = new SmtpClient();
+            //client.Send(message);
 
-                //SmtpClient client = new SmtpClient();
-                //client.Send(message);
-            });
-
-            return File("~/Content/files/Sell_your_story.pdf", "application/pdf");
-
+            return RedirectToAction("SuccessPage", "Home");
 
         }
+
+        //[HttpPost]
+        //public async Task<ActionResult> SendEmail(string first_name, string last_name, string email, string phone, string address, string city,string state, string zip, string msg)
+        //{
+
+        //    await Task.Run(() =>
+        //    {
+        //        //MailMessage message = new MailMessage();
+        //        //message.From = new MailAddress(email);
+
+        //        //message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+
+        //        //message.Subject = "A potential client has registered: ";
+        //        //message.Body = string.Concat("<p>First Name: ", first_name, "</p><p> Name: ", last_name, "</p><p>Email: ", email, "</p><p>Phone: ", phone, "</p><p>Address: ", address, "</p><p>City: ", city, "</p><p>State: ", state, "</p><p>Zip: ", zip, "</p><p>Message: ", msg);
+
+        //        //SmtpClient client = new SmtpClient();
+        //        //client.Send(message);
+        //    });
+
+        //    return File("~/Content/files/Sell_your_story.pdf", "application/pdf");
+
+
+        //}
 
         
     }

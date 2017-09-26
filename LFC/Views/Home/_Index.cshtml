@@ -1,4 +1,5 @@
-﻿<article style="padding-top:10px">
+﻿@model LFC.Models.Service
+<article style="padding-top:10px">
     <strong>
         What. Why. Where. When.
     </strong>
@@ -18,7 +19,7 @@
         My copy will answer both of those questions.
     </p>
     <strong>
-        First things first-it gets their attention
+        You need copy that gets their attention
     </strong>
     <p>
         Before anything else, however, you have to get noticed. You need copy that
@@ -27,11 +28,11 @@
         their problem in a different light. I write copy that does both.
     </p>
     <strong>
-        It builds rapport
+       And builds rapport
     </strong>
     <p>
         Most people buy from those they trust. Developing rapport with your
-        customer builds trust. And you develop that rapport by telling the customer
+        customer builds trust. You gain that trust in part by telling the customer
         the story of you and your business. Once the customer comes to know your
         story and solution, they are more inclined to listen to you.
     </p>
@@ -42,7 +43,7 @@
         solution.
     </p>
     <strong>
-        And then educate them
+        The best copy educates your customer
     </strong>
     <p>
         Stories have been educating people since before recorded history. And today
@@ -52,7 +53,7 @@
         passionate storyteller, and my copy will help readers do all of that.
     </p>
     <strong>
-       I offer
+        I offer
     </strong>
     <p>
         Email marketing is a great way to introduce your business and remind your
@@ -80,6 +81,9 @@
     <p>
         I look forward to hearing from you.
     </p>
+    <div id="hdnService">
+        @Model.Type
+    </div>
 
 </article>
 

@@ -1,11 +1,16 @@
 ﻿@model LFC.Models.Contact
 
 
-<form class="well form-horizontal blueBox" style="width:300px" action="@Url.Action("SendEmail","Contact")" method="post" id="contact_form">
+<form class="well form-horizontal blueBox" action="~/Contact/SendEmail" method="post" id="contact_form">
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Contact Me</legend>
+        <legend>For best results think 'What, When,How,Who,Why' when filling in the project description."!</legend>
+        <ul>
+            <li>What-what are trying to sell. The more I know about it, the better.</li>
+            <li>Who-customer demographics. Again, the more I know about it, the better.</li>
+            <li>When-deadlines.</li>
+        </ul>
 
         <!-- Text input-->
 
@@ -14,7 +19,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="first_name" placeholder="First Name" @*value=@Model.FirstName*@ class="form-control" type="text">
+                    <input name="first_name" placeholder="First Name" value="" class="form-control" type="text" minlength="2" required>
                 </div>
             </div>
         </div>
@@ -24,7 +29,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="last_name" placeholder="Last Name" @*value=@Model.LastName*@ class="form-control" type="text">
+                    <input name="last_name" placeholder="Last Name" class="form-control" type="text" minlength="2" required>
                 </div>
             </div>
         </div>
@@ -35,7 +40,7 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input name="email" placeholder="E-Mail Address" @*value=@Model.EmailAddress*@ class="form-control" type="text">
+                    <input name="email" placeholder="E-Mail Address" class="form-control" type="email">
                 </div>
             </div>
         </div>
@@ -48,121 +53,32 @@
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input name="phone" placeholder="(845)555-1212" @*value=@Model.Phone*@ class="form-control" type="text">
+                    <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
                 </div>
             </div>
         </div>
+
+     
 
         <!-- Text input-->
-
-        <!--<div class="form-group">
-
-            <div class="inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="address" placeholder="Address" @*value=@Model.Address*@ class="form-control" type="text">
-                </div>
-            </div>
-        </div>
-
-        
-
         <div class="form-group">
 
             <div class="inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="city" placeholder="city" @*value=@Model.City*@ class="form-control" type="text">
-                </div>
-            </div>
-        </div>-->
-
-        <!-- Select Basic -->
-
-        <!--<div class="form-group">
-
-            <div class="selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="state" class="form-control selectpicker">
-                        <option value=" ">Please select your state</option>
-                        <option>Alabama</option>
-                        <option>Alaska</option>
-                        <option>Arizona</option>
-                        <option>Arkansas</option>
-                        <option>California</option>
-                        <option>Colorado</option>
-                        <option>Connecticut</option>
-                        <option>Delaware</option>
-                        <option>District of Columbia</option>
-                        <option> Florida</option>
-                        <option>Georgia</option>
-                        <option>Hawaii</option>
-                        <option>daho</option>
-                        <option>Illinois</option>
-                        <option>Indiana</option>
-                        <option>Iowa</option>
-                        <option> Kansas</option>
-                        <option>Kentucky</option>
-                        <option>Louisiana</option>
-                        <option>Maine</option>
-                        <option>Maryland</option>
-                        <option> Mass</option>
-                        <option>Michigan</option>
-                        <option>Minnesota</option>
-                        <option>Mississippi</option>
-                        <option>Missouri</option>
-                        <option>Montana</option>
-                        <option>Nebraska</option>
-                        <option>Nevada</option>
-                        <option>New Hampshire</option>
-                        <option>New Jersey</option>
-                        <option>New Mexico</option>
-                        <option>New York</option>
-                        <option>North Carolina</option>
-                        <option>North Dakota</option>
-                        <option>Ohio</option>
-                        <option>Oklahoma</option>
-                        <option>Oregon</option>
-                        <option>Pennsylvania</option>
-                        <option>Rhode Island</option>
-                        <option>South Carolina</option>
-                        <option>South Dakota</option>
-                        <option>Tennessee</option>
-                        <option>Texas</option>
-                        <option> Uttah</option>
-                        <option>Vermont</option>
-                        <option>Virginia</option>
-                        <option>Washington</option>
-                        <option>West Virginia</option>
-                        <option>Wisconsin</option>
-                        <option>Wyoming</option>
-                    </select>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                    <input name="website" placeholder="Website or domain name" class="form-control" type="text">
                 </div>
             </div>
         </div>
 
-       
-
-        <div class="form-group">
-
-            <div class="inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input name="zip" placeholder="Zip Code"  class="form-control" type="text">
-                </div>
-            </div>
-        </div>-->
-
-       
+      
 
         <div class="form-group">
 
             <div class="inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    <textarea class="form-control" name="message" placeholder="Project Description"></textarea>
-                  @*  @Html.TextArea("Message", @Model.Message  , new { @class = "form-control" })*@
+                    <textarea class="form-control" name="comment" placeholder="What,When,How,Who,Why"></textarea>
                 </div>
             </div>
         </div>
@@ -174,7 +90,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4">
-                <button type="submit" id="btnSubmit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
             </div>
         </div>
 
@@ -185,69 +101,24 @@
 <script type="text/javascript">
     $().ready(function () {
 
-        $('#btnSubmit').click(function () {
-            var $form = $(btnClicked).parents('form');
-            var _url = '@Url.Action("SendEmail", "Contact")';
-            $.ajax({
-                type: "POST",
-                //url: $form.attr('action'),
-                url: _url,
-                data: $form.serialize(),
-                error: function (xhr, status, error) {
-                    //do something about the error
-                },
-                success: function (response) {
-                    //do something with response
-                    $('#success_message').show();
-                    $('#success_message').fadeOut(5000);
 
-                }
-            });
-
-            return false; 
+        $('#contactForm').validate({
+            rules: {
+                name: "required",
+                email: "required",
+                subject: "required",
+                message: "required"
+            },
+            messages: {
+                name: "At least a first name, please.",
+                email: "Please enter a valid email where I can reach you.",
+                subject: "Subject required.",
+                message: "Please tell me briefly what I can do for you. "
+            }
         });
-
-        $('#contact_form').validate(
-            {
-                rules: {
-                    first_name: {
-                        minlength: 2,
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    }
-                    //message: {
-                    //    minlength: 2,
-                    //    required: true
-                    //}
-                },
-                highlight: function (element) {
-                    $(element).closest('.control-group').removeClass('success').addClass('error');
-                },
-                //success: function (element) {
-                //    element
-                //        .text('OK!').addClass('valid')
-                //        .closest('.control-group').removeClass('error').addClass('success');
-                //},
-
-                // Make sure the form is submitted to the destination defined
-                // in the "action" attribute of the form when valid
-                //submitHandler: function (form) {
-                //    form.submit();
-                //}
-
-            });
-           
 
 
     });
-
-    function validateForm() {
-      
-    }
-
 
 
 
