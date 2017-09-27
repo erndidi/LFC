@@ -27,19 +27,17 @@ namespace LFC.Controllers
         [HttpPost]
         public ActionResult SendEmail(Contact contact)
         {
-            //MailMessage message = new MailMessage();
-            //message.From = new MailAddress(contact.EmailAddress);
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress(contact.EmailAddress);
 
-            //message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+            message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
 
-            //message.Subject = string.Concat("A potential client has registered: ", contact.Subject);
-            //message.Body = contact.Message;
+            message.Subject = string.Concat("A potential client has registered: ", contact.Subject);
+            message.Body = contact.Message;
 
-            //SmtpClient client = new SmtpClient();
-            //client.Send(message);
-
+            SmtpClient client = new SmtpClient();
+            client.Send(message);
             return RedirectToAction("SuccessPage", "Home");
-
         }
 
         //[HttpPost]
