@@ -5416,11 +5416,11 @@ a[type="button"] {
 }
 
 .headline2 {
-    font-family: 'Anton';
+    font-family: 'Raleway';
     font-weight: bold;
-    font-size: 36px;
+    font-size: 18px;
     color: #1b70fd;
-    text-shadow: 4px 4px 4px #aaa;
+    /*text-shadow: 4px 4px 4px #aaa;*/
     text-align: center;
     /*background: rgba(253,253,165,1);
     background: -moz-linear-gradient(left, rgba(253,253,165,1) 0%, rgba(254,206,91,1) 12%, rgba(255,171,36,1) 21%);
