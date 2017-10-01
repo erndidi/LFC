@@ -175,6 +175,7 @@
     <Compile Include="ViewModels\AccountViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\app.css" />
@@ -230,22 +231,29 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\business-casual.css" />
     <Content Include="css\theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
+    <Content Include="images\bg.jpg" />
     <Content Include="images\elk.jpg" />
     <Content Include="images\icon-biathlon.png" />
     <Content Include="images\icon-bobsled.png" />
     <Content Include="images\icon-cross-country.png" />
     <Content Include="images\icon-downhill.png" />
     <Content Include="images\icon-snowboard.png" />
+    <Content Include="images\intro-pic.jpg" />
     <Content Include="images\lake.jpg" />
     <Content Include="images\range-1.png" />
     <Content Include="images\range-2.png" />
     <Content Include="images\range-3.png" />
     <Content Include="images\range-4.png" />
     <Content Include="images\range-5.png" />
+    <Content Include="images\slide-1.jpg" />
+    <Content Include="images\slide-2.jpg" />
+    <Content Include="images\slide-3.jpg" />
     <Content Include="images\snowboarder.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -454,6 +462,9 @@
     <Content Include="Content\Sell your business by selling your story.pdf" />
     <Content Include="Content\files\Sell_your_story.pdf" />
     <Content Include="Samples\DirectMail\Show your kids where money grows .docx" />
+    <Content Include=".travis.yml" />
+    <Content Include="LICENSE" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
@@ -476,6 +487,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\phoneUS.js" />
     <Content Include="Styles\screen.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\popper\popper.js" />
+    <Content Include="vendor\popper\popper.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
