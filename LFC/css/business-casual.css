@@ -6,11 +6,9 @@
 
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: url('../img/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  /*background: url('../img/bg.jpg') no-repeat center center fixed;*/
   background-size: cover;
-  -o-background-size: cover;
+
 }
 
 h1, h2, h3, h4, h5, h6, .text-heading {
@@ -54,7 +52,7 @@ h1 {
 
 hr.divider {
   border-color: #292b2c;
-  max-width: 250px;
+
 }
 
 .map-container iframe {

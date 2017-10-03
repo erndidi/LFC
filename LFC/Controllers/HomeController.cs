@@ -63,5 +63,10 @@ namespace LFC.Controllers
             // return PartialView("_Blog");
             return View();
         }
+
+        public ActionResult Error(string id)
+        {
+            return View();
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using LFC.Models;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace LFC.Controllers
 {
@@ -27,17 +28,27 @@ namespace LFC.Controllers
         [HttpPost]
         public ActionResult SendEmail(Contact contact)
         {
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress(contact.EmailAddress);
+            try{
+                contact.Message = string.Concat("First Name: ", contact.FirstName, " Last Name: ", contact.LastName, " Email Address: ", contact.EmailAddress, " Message: ", contact.Message);
+                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
 
-            message.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+                System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
 
-            message.Subject = string.Concat("A potential client has registered: ", contact.Subject);
-            message.Body = contact.Message;
+                msg.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
 
-            SmtpClient client = new SmtpClient();
-            client.Send(message);
-            return RedirectToAction("SuccessPage", "Home");
+                msg.Subject = "Potential Client";
+                msg.IsBodyHtml = true;
+                msg.Body = contact.Message;
+
+                client.Send(msg);
+
+                return RedirectToAction("SuccessPage", "Home");
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("HandleEmailError", "Contact",new { message = contact.Message });
+            }
+          
         }
 
         //[HttpPost]
@@ -62,7 +73,12 @@ namespace LFC.Controllers
 
 
         //}
-
+        public ActionResult HandleEmailError(string message)
+        {
+            Contact contact = new Contact();
+            contact.Message = message;
+            return View(contact);
+        }
         
     }
 }

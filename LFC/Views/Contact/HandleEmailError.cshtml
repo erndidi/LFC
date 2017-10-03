@@ -1,0 +1,45 @@
+﻿@model LFC.Models.Contact
+
+@{
+    ViewBag.Title = "HandleEmailError";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div id="modalEmailErrorMsg" style="width:700px; height:auto" title="Looks like we had trouble sending your message.">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+         However, you can still send me an email by clicking <a href="mailto:leapforwardcopy@gmail.com">here.</a>
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+    <p>
+        It looks like you left me a message :). No need to type it over again. Just copy and paste in your email client.
+    </p>
+                   <article>
+                       @string.Concat(@"""",Model.Message,@"");
+                   </article>
+                      
+                 
+        }
+    </p>
+    <p>
+        In the meantime, Godaddy and I will get the email squared away. I apologize, for the inconvenience.
+    </p>
+</div>
+
+<script>
+  $(function () {
+      $("#modalEmailErrorMsg").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    $(this).dialog("close");
+                    window.location = '@Url.Action("Index","Home")';
+                }
+            }
+        });
+    });
+
+</script>

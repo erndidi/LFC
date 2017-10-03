@@ -4,36 +4,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="modal fade" id="modalSuccess">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+<div  id="modalSuccess">
+    
                 <h5 class="modal-title">Thanks! I'll be in touch.</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                @*<button type="button" class="close" id="btnClose" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-               @* <p>Modal body text goes here.</p>*@
-            </div>
-            <div class="modal-footer">
-                @*<button type="button" class="btn btn-primary">Save changes</button>*@
-                <button id="btnHome" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+                </button>*@
+      
 </div>
 
 <script>
-    $(document).ready(function () {
-        var loc = window.location;
-        $('#modalSuccess').modal('show');
-       
+    $(function () {
+        $("#modalSuccess").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    $(this).dialog("close");
+                    window.location = '@Url.Action("Index","Home")';
+                }
+            }
+        });
     });
 
-    $('#btnHome').click(function () {
-        window.location = '@Url.Action("Index","Home")';
+       
+  
+    $(document).ready(function () {
+        var loc = window.location;
+        $("#modalSuccess").dialog("open");
+
     });
+
+
+
 
 </script>
 
