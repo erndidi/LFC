@@ -1,7 +1,6 @@
 {
   "title": "Integral Messaging",
   "name": "startbootstrap-business-casual",
-  "version": "4.0.0-beta",
   "description": "Email Marketing copy that tells your business's story",
   "keywords": [
     "css",
@@ -24,14 +23,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-business-casual.git"
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.11.1"
-  },
-  "devDependencies": {
-    "browser-sync": "2.18.13",
-    "gulp": "^3.9.1"
   }
+
 }

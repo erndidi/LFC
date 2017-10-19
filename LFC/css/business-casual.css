@@ -62,3 +62,14 @@ hr.divider {
 .map-container iframe.clicked {
   pointer-events: auto;
 }
+
+.marquee {
+    top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 15s linear infinite;
+}
+
+    .marquee:hover {
+        animation-play-state: paused;
+    }

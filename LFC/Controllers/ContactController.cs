@@ -25,30 +25,33 @@ namespace LFC.Controllers
         }
 
 
+        
+
         [HttpPost]
-        public ActionResult SendEmail(Contact contact)
+        public Contact SendEmail(Contact model)
         {
-            try{
-                contact.Message = string.Concat("First Name: ", contact.FirstName, " Last Name: ", contact.LastName, " Email Address: ", contact.EmailAddress, " Message: ", contact.Message);
-                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
-
-                System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-
-                msg.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
-
-                msg.Subject = "Potential Client";
-                msg.IsBodyHtml = true;
-                msg.Body = contact.Message;
-
-                client.Send(msg);
-
-                return RedirectToAction("SuccessPage", "Home");
-            }
-            catch(Exception ex)
+            try
             {
-                return RedirectToAction("HandleEmailError", "Contact",new { message = contact.Message });
+                model.Message = string.Concat(" Name: ", model.Name,  " Email Address: ", model.EmailAddress,"Phone:  ",model.Phone, "Message: ", model.Message);
+                //System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+
+                //System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+
+                //msg.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+
+                //msg.Subject = "Potential Client";
+                //msg.IsBodyHtml = true;
+                //msg.Body = contact.Message;
+
+                //client.Send(msg);
+                model.Message = "Success";
+                
             }
-          
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+            }
+           return model;
         }
 
         //[HttpPost]

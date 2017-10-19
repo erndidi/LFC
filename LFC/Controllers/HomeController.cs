@@ -11,15 +11,10 @@ namespace LFC.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string id)
+        public ActionResult Index()
         {
-            ViewBag.Title = "LFC";
-            Service ser = new Service();
-            if (!string.IsNullOrEmpty(id))
-            {
-                ser.Type = id;
-            }
-            return View(ser);
+            
+            return View();
         }
                
 

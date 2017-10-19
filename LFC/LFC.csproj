@@ -21,6 +21,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -99,6 +101,9 @@
     <Reference Include="Newtonsoft.Json">
       <Private>True</Private>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validation.2.4.15\lib\net45\Validation.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -183,6 +188,9 @@
     <Content Include="Content\app.css" />
     <Content Include="Content\background.png" />
     <Content Include="Content\background2.png" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\borderbackground.png" />
     <Content Include="Content\logo.png" />
@@ -229,15 +237,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\business-casual.css" />
-    <Content Include="css\jquery-ui.css" />
-    <Content Include="css\jquery-ui.structure.css" />
-    <Content Include="css\jquery-ui.theme.css" />
-    <Content Include="css\theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -249,30 +249,24 @@
     <Content Include="images\slide-3.jpg" />
     <Content Include="Content\Sell your business by selling your story.pdf" />
     <Content Include="Content\files\Sell_your_story.pdf" />
+    <Content Include="mail\contact_me.php" />
     <Content Include="Samples\DirectMail\Show your kids where money grows .docx" />
     <Content Include=".travis.yml" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
-    <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Scripts\bootstrap - Copy.js" />
+    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\cbpAnimatedHeader.js" />
-    <Content Include="Scripts\classie.js" />
-    <Content Include="Scripts\jquery-3.1.1.js" />
-    <Content Include="Scripts\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery.lettering-0.6.1.min.js" />
-    <Content Include="Scripts\jquery.marquee.js" />
     <Content Include="Scripts\jquery.textillate.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\phoneUS.js" />
     <Content Include="Styles\screen.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
@@ -301,7 +295,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
     <Content Include="Views\Home\SuccessPage.cshtml" />
     <Content Include="Views\Contact\RenderReportContactForm.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
@@ -330,13 +323,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -361,10 +347,31 @@
     <Content Include="Views\Article\BeyondTheGame.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -394,6 +401,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
