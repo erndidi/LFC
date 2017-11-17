@@ -243,6 +243,7 @@
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\CompanyName.svg" />
     <Content Include="images\intro-pic.jpg" />
     <Content Include="images\slide-1.jpg" />
     <Content Include="images\slide-2.jpg" />
@@ -257,6 +258,7 @@
     <Content Include="Scripts\bootstrap - Copy.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Show your kids where money grows .pdf" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
@@ -310,7 +312,6 @@
     <Content Include="Views\Home\_Blog.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\ContactMe.cshtml" />
-    <Content Include="Views\Home\EmailMarketing.cshtml" />
     <Content Include="Views\Home\_Contact - Copy.cshtml" />
     <Content Include="Views\Contact\HandleEmailError.cshtml" />
   </ItemGroup>

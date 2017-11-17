@@ -32,21 +32,22 @@ namespace LFC.Controllers
         {
             try
             {
-                model.Message = string.Concat(" Name: ", model.Name,  " Email Address: ", model.EmailAddress,"Phone:  ",model.Phone, "Message: ", model.Message);
-                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
-                System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-                msg.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
-                msg.Subject = "Potential Client";
-                msg.IsBodyHtml = true;
-                msg.Body = model.Message;
-                client.Send(msg);
+                //model.Message = string.Concat(" Name: ", model.Name,  " Email Address: ", model.EmailAddress,"Phone:  ",model.Phone, "Message: ", model.Message);
+                //System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+                //System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+                //msg.To.Add(new MailAddress("leapforwardcopy@gmail.com"));
+                //msg.To.Add(new MailAddress("ernest@xactmessaging.com"));
+                //msg.Subject = "Potential Client";
+                //msg.IsBodyHtml = true;
+                //msg.Body = model.Message;
+                //client.Send(msg);
                 model.Message = "Success";                
             }
             catch (Exception ex)
             {
                 model.Message = "Fail";
             }
-           return Json(new { response = model});
+           return Json(new { Message = model.Message});
         }
 
         //[HttpPost]

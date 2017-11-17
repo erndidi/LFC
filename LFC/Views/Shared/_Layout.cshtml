@@ -7,19 +7,16 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" />
     <link href=@Url.Content("~/Content/animate.css") rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Gravitas+One:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
     @*<link href=@Url.Content("~/css/jquery-ui.css") rel="stylesheet" />
-    <link href=@Url.Content("~/css/jquery-ui.structure.css") rel="stylesheet" />
-    <link href=@Url.Content("~/css/jquery-ui.theme.css") rel="stylesheet" />*@
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous"></script>
+        <link href=@Url.Content("~/css/jquery-ui.structure.css") rel="stylesheet" />
+        <link href=@Url.Content("~/css/jquery-ui.theme.css") rel="stylesheet" />*@
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src=@Url.Content("~/Scripts/bootstrap.js") async></script>
-    <script src=@Url.Content("~/Scripts/jquery.validate.min.js") async></script>
-    <script src=@Url.Content("~/Scripts/jquery.validate.min.js") async></script>
     <script src=@Url.Content("~/Scripts/jquery.validate.min.js") async></script>
     <script src=@Url.Content("~/Scripts/jquery.lettering-0.6.1.min.js") async></script>
     <script src=@Url.Content("~/Scripts/jquery.textillate.js") async></script>
@@ -30,156 +27,185 @@
     <link href="~/css/business-casual.css" rel="stylesheet" />
 </head>
 <body>
-  
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-4">
-                <nav class="navbar navbar-default navbar-fixed-top">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            @*<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Project name</a>*@
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a id="homeLink" href="#">Home</a></li>
-                                <li><a id="aboutLink" href="#">About</a></li>
-                                <li><a id="contactLink" href="#">Contact</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Writing<span class="caret"></span></a>
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container">
+
+                <div id="navbar" class="navbar-collapse collapse navbar-toggler">
+                    <ul class="nav navbar-nav" style="font-size:14px">
+                        <li class="active"><a id="homeLink" href="#">Home</a></li>
+                        <li><a id="aboutLink" href="#">About Me</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Writing<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a id="emailLink" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Email</a>
                                     <ul class="dropdown-menu">
-                                        <li><a id="emailLink" href="#">Email</a></li>
-                                        <li><a id="directMailLink" href="#">Direct Mail</a></li>
-                                        <li><a id="articleLink" href="#">Articles</a></li>
-                                        @*<li role="separator" class="divider"></li>
+                                        <li><a id="emailB2CLink" href="#">Email B2C</a></li>
+                                        <li><a id="emailB2BLink" href="#">Email B2B</a></li>
+                                    </ul>
+                                </li>
+                                <li><a id="directMailLink" href='@Url.Content("~/Content/Show your kids where money grows .pdf")'>Direct Mail</a></li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a id="beyondTheGameLink" href="#">Beyond The Game</a></li>
+                                        <li><a id="hopeCenterLink" href="#">Center helps patients with AIDS</a></li>
+                                        <li><a id="spaceCenterLink" href="#">Space Institute needs funds to stay alive</a></li>
+                                    </ul>
+                                </li>
+                                <li><a id="blogLink" href="#">Blog</a></li>
+                                @*<li role="separator" class="divider"></li>
                                 <li class="dropdown-header">Nav header</li>
                                 <li><a href="#">Separated link</a></li>
                                 <li><a href="#">One more separated link</a></li>*@
-                                    </ul>
-                                </li>
                             </ul>
+                        </li>
+                    </ul>
 
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
-                </nav>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-xs-3">
+               
             </div>
-            <div class="col-md-8">
-                <div class="tagline-upper text-left text-heading text-shadow text-dark mt-5 d-none d-lg-block" style="color: #beab19">Integral Messaging</div>
+            <div class="col-xs-6">
+                @*<div class="tagline-upper text-left text-heading text-shadow text-dark mt-5 d-none d-lg-block" style="color: #beab19; font-family:'Gravitas One'; font-size:48px">Xact Messaging</div>*@
+                <div>                                     
+                    <img src="~/images/CompanyName.svg" />
+                </div>
+               
+            </div>
+            <div class="col-xs-3" style=" text-align:left;font-size: 14px;color: #beab19; padding-right:0px">
+                @*<div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block"> Copyright &copy; Integral Messaging 2017</div>*@
+                <div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">OWNER: ERNEST LIPFORD</div>
+                <div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">Phone: 615-428-8570, skype: ernest.lipford</div>
+
             </div>
         </div>
-       
-      
+
+
 
         @*<div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">Phone: 615-847-8911, Skype:ernest.lipford</div>*@
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3" style="padding-right:10px;">
-                 
-             
+    <div class="container-mod" style="margin-right:10%">
+
+        <div class="row" style="width:100%; margin-right:10px;">
+            <div class="col-xs-2" style="padding-right:10px; margin-right:70px; padding-top:10px;color: #be193f; font-size:16px">
+                @*<ul>
+                    <li>Email Marketing</li>
+                    <li>Direct Mail</li>
+                    <li>Articles</li>
+                    <li>Works On Spec</li>
+                </ul>*@
+
             </div>
-            <div id="main" class="col-md-5" style="padding-right:10px">
+            <div id="main" class="col-xs-6" style="padding-right:10px; text-align:justify; padding-top:10px">
                 @RenderBody()
+
+
             </div>
-            <div class="col-md-4" style="padding-left:10px; margin-left:20px; width:25%">
-                <form>
-                    <div class="form-group">
-                        <label for="lblName">Name</label>
-                        <input type="text" class="form-control" id="txtName" required="required" placeholder="Enter email">                      
-                    </div>
-                    <div class="form-group">
-                        <label for="lblEmail">Email address</label>
-                        <input type="email" class="form-control" required="required" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="lblMessage">Phone</label>
-                        <input type="text" name="phone" class="form-control" id="txtPhone" placeholder="Phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="lblMessage">Message</label>
-                        <textarea class="form-control" rows="5" id="txtMessage"></textarea>
-                    </div>
-                   
-                    <button id="btnSubmit" class="btn btn-primary">Submit</button>
+            <div class="col-xs-4" style="padding-left:10px;  margin-left:90px; padding-top:10px; width:20%">
+                <form id="contactForm" class="form-inline">
+                    <fieldset>
+                        <legend>Contact Me</legend>
+                        <div class="form-group">
+                            @*<label for="lblName">Name</label>*@
+                            <input type="text" class="form-control" name="name" id="txtName" placeholder="Enter name" minLength="2" required>
+                        </div>
+                        <div class="form-group">
+                            @*<label for="lblEmail">Email address</label>*@
+                            <input type="email" name="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            @*<label for="lblMessage">Phone</label>*@
+                            <input type="text" name="phone" class="form-control" id="txtPhone" placeholder="Enter Phone">
+                        </div>
+                        <div class="form-group">
+                            
+                            <textarea name="message" class="form-control" rows="5" id="txtMessage" placeholder="Message" required></textarea>
+                        </div>
+
+                        <button id="btnSubmit" class="btn btn-primary has-spinner"><i class="fa fa-spinner fa-spin"></i>Submit</button>
+                        <div id="spinner" style="display:none">
+                            <p>Sending:</p>
+                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                        </div>
+
+
+
+                    </fieldset>
                 </form>
             </div>
+        </div>
+        <div class="row text-center">
+            <footer class="bg-faded text-lg-left py-5">
+                <div class="container">
 
+                </div>
 
+            </footer>
         </div>
 
-
-
         <!-- /.container -->
-        <footer class="bg-faded text-center py-5">
-            <div class="container">
-                <p class="m-0">Copyright &copy; Integral Messaging 2017</p>
-                <div style="height:auto" class="tagline-lower text-center text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">OWNER: ERNEST LIPFORD</div>
-                <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">Phone: 615-428-8570, skype: ernest.lipford</div>
-            </div>
 
-        </footer>
 
     </div>
 
 
-
+    <!---------------Views-->
 
     <div id="home" style="display:none">
-        div class="container">
-        <div class="bg-faded p-4 my-4">
 
-            <hr class="divider">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img class="img-fluid mb-4 mb-lg-0" src="~/images/slide-1.jpg" alt="">
+        <article style="font-size:16px;">
 
-                </div>
-                <div class="col-lg-6">
 
-                    <p>
-                        No matter what you business, your customers are going to want to know two
-                        things.
-                    </p>
-                    <ul>
-                        <li>
-                            What do you have to offer?
-                        </li>
-                        <li>
-                            Why should I or my business care?
-                        </li>
-                    </ul>
-                    <p>
-                        My copy will answer both of those questions.
-                    </p>
-                    <strong>
-                        It gets their attention. And it builds rapport
-                    </strong>
-                    <p>
-                        Before anything else, however, you have to get noticed. You need copy that
-                        tells your customer something that they never heard before. Or it tells
-                        them what they know or think they know, but in a way that allows them to see
-                        their problem in a different light. I write copy that does both.
-                    </p>
 
-                    <p>
-                        But rather than just have me tell you that I can help, let me show you. I
-                        have samples on this site that you can look at. Send me any marketing
-                        piece-ad, brochure, sales letter, white paper, etc. I’ll send you back an
-                        analysis of what’s right, what could be better, and what I would do. I also
-                        do work on spec.
-                    </p>
-                </div>
+            <p>
+                No matter what you business, your customers are going to want to know two
+                things.
+            </p>
+            <ul>
+                <li>
+                    What do you have to offer?
+                </li>
+                <li>
+                    Why should I or my business care?
+                </li>
+            </ul>
+            <p>
+                My copy will answer both of those questions.
+            </p>
+            <div>
+                <strong>
+                    It gets their attention. And it builds rapport
+                </strong>
             </div>
-        </div>
+            <br />
+            <p>
+                Before anything else you have to get noticed. You need copy that
+                tells your customer something that they never heard before. Or it tells
+                them what they know or think they know, but in a way that shows them
+                their problem in a different light.
+            </p>
+            <p>My copy shows them that you're solution is their solution</p>
 
+            <p>
+                But rather than just have me tell you what I can do, let me show you. I
+                have samples on this site that you can look at. Send me any marketing
+                piece-ad, brochure, sales letter, white paper, etc. I’ll send you back an
+                analysis of what’s right, what could be better, and what I would do. I also
+                work on spec. I will be happy to write something up that will give you an idea of the style and direction I'll use.
+                So get in touch and let me know what you're trying to achieve.
+            </p>
+            <p>I look forward to hearing from you.</p>
 
-
+        </article>
     </div>
 
     <div id="about" style="display:none">
@@ -201,109 +227,113 @@
         </article>
     </div>
 
+
+
     <div id="divEmail" style="display:none">
 
         <article>
-            <h2>Click on links below for email samples</h2>
+            <h1>Click on links below for email samples</h1>
 
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1"> Subject: Not published because you hate rejection? Try this…</a>
-                        </h4>
+                        <h2 class="panel-title">
+                            <a data-toggle="collapse" style="font-size:16px;font-weight:bold" href="#collapse1"> Subject: Not published because you hate rejection? Try this…</a>
+                        </h2>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
-                        <div>
-                            Hi {FirstName}},
-                            <br />
-                        </div>
-                        <div>
-                            I met this lady-I’ll call her Linda- who was an aspiring author. She wrote and submitted fifteen romance novels to publishers. All fifteen were rejected.
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            Ouch.
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            The lady told me then that she was working on her sixteenth novel. And she was going to submit that one as well. I don’t know if sixteen was the magic number or not, but -way to push, there Linda!
-                        </div>
-                        <div>
-                            Would you put yourself through that? I know I wouldn't. I don't expect many of us would.
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            But you know what? You don’t have to. Forget about editors and fancy pants publishers and they’re expectations. You can get published right now! And make money!
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            How? By publishing on the web. Write compelling content that will draw people to your site. Your writing will be out there for everybody to see. And our course called "How to Write Your Own Money-Making Websites" will show you the quickest and cheapest
-                            way to get a website up and running.
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            -Click here to find out more.-
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            If you really want to be a writer and live the dream, now’s the chance. "How to Write Your Own Money-Making Websites" lays it out for you
-                        </div>
-                        <div>
-                            • Choose the best way to make your topic traffic friendly.
-                        </div>
-                        <div>
-                            • How to pick a domain name that will get customers.
-                        </div>
-                        <div>
-                            • Write copy that grabs interest.
-                        </div>
-                        <div>
-                            • Where to find affiliates
-                        </div>
-                        <div>
-                            • How to pick a name for your website.
-                        </div>
-                        <div>
-                            • How to write copy search engines love
-                        </div>
-                        <div>
-                            -Click here to find out more.-
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            Once you finish "How to Write Your Own Money-Making Websites"  you will know how to put up a website and get followers. You will know what you need to do to become your own publisher. And once you publish for yourself, there's nothing stopping you from creating more websites, publishing more material, and earning more money. With the skills gained from our course, you can provide opportunities for yourself and others. The sky is the limit!
-                        </div>
-                        <div>
-                            <br />
-                        </div>
-                        <div>
-                            There. Rejection, smjection. You have no excuse, and no reason not to get started now.
-                        </div>
-                        <div>
-                            -Click here to stop daydreaming and to learn how to start living the life you always wanted!-
-                        </div>
-                        <div>
-                            Start today!
-                        </div>
-                        <div>
+                        <article style="font-size:16px">
+                            <div>
+                                Hi {FirstName},
+                                <br />
+                            </div>
+                            <div>
+                                I met this lady-I’ll call her Linda- who was an aspiring author. She wrote and submitted fifteen romance novels to publishers. All fifteen were rejected.
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                Ouch.
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                The lady told me then that she was working on her sixteenth novel. And she was going to submit that one as well. I don’t know if sixteen was the magic number or not, but -way to push, there Linda!
+                            </div>
+                            <div>
+                                Would you put yourself through that? I know I wouldn't. I don't expect many of us would.
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                But you know what? You don’t have to. Forget about editors and fancy pants publishers and they’re expectations. You can get published right now! And make money!
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                How? By publishing on the web. Write compelling content that will draw people to your site. Your writing will be out there for everybody to see. And our course called "How to Write Your Own Money-Making Websites" will show you the quickest and cheapest
+                                way to get a website up and running.
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                -Click here to find out more.-
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                If you really want to be a writer and live the dream, now’s the chance. "How to Write Your Own Money-Making Websites" lays it out for you
+                            </div>
+                            <div>
+                                • Choose the best way to make your topic traffic friendly.
+                            </div>
+                            <div>
+                                • How to pick a domain name that will get customers.
+                            </div>
+                            <div>
+                                • Write copy that grabs interest.
+                            </div>
+                            <div>
+                                • Where to find affiliates
+                            </div>
+                            <div>
+                                • How to pick a name for your website.
+                            </div>
+                            <div>
+                                • How to write copy search engines love
+                            </div>
+                            <div>
+                                -Click here to find out more.-
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                Once you finish "How to Write Your Own Money-Making Websites"  you will know how to put up a website and get followers. You will know what you need to do to become your own publisher. And once you publish for yourself, there's nothing stopping you from creating more websites, publishing more material, and earning more money. With the skills gained from our course, you can provide opportunities for yourself and others. The sky is the limit!
+                            </div>
+                            <div>
+                                <br />
+                            </div>
+                            <div>
+                                There. Rejection, smjection. You have no excuse, and no reason not to get started now.
+                            </div>
+                            <div>
+                                -Click here to stop daydreaming and to learn how to start living the life you always wanted!-
+                            </div>
+                            <div>
+                                Start today!
+                            </div>
+                            <div>
 
-                        </div>
-                    </div>
+                            </div>
+                        </article>
+                    </div>  
                 </div>
             </div>
             <br />
@@ -311,7 +341,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#dontListen"> Subject: {Firstname},don’t listen...</a>
+                            <a data-toggle="collapse" class="emailLinks" href="#dontListen"> Subject: {Firstname},don’t listen...</a>
                         </h4>
                     </div>
                     <div id="dontListen" class="panel-collapse collapse">
@@ -348,13 +378,13 @@
                             <br />
                         </div>
                         <div>
-                            Is that website yours? If not, why not. If so, are you making money with it? If not, why not?  Whatever your interest or passion is you can and should be making money at it.
+                            Is that website yours? If not, why not? If so, are you making money with it? If not, why not?  Whatever your interest or passion is you can and should be making money at it.
                         </div>
                         <div>
                             <br />
                         </div>
                         <div>
-                            {FirstName}}, let's get you on the road to profiting from your passion.
+                            {FirstName}, let's get you on the road to profiting from your passion.
                         </div>
                         <div>
                             <br />
@@ -437,7 +467,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#doWhatYouLove">Subject:do what you love-$$$/month ….</a>
+                            <a data-toggle="collapse" class="emailLinks" href="#doWhatYouLove">Subject: Do what you love-$$$/month ….</a>
                         </h4>
                     </div>
                     <div id="doWhatYouLove" class="panel-collapse collapse">
@@ -573,7 +603,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#dontLetThisGoBye">Subject: Don’t let this go bye.</a>
+                            <a data-toggle="collapse" class="emailLinks" href="#dontLetThisGoBye">Subject: Don’t let this go bye.</a>
                         </h4>
                     </div>
                     <div id="dontLetThisGoBye" class="panel-collapse collapse">
@@ -652,7 +682,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#timesUp">SUBJECT: Times up, {FIRSTNAME}....</a>
+                            <a data-toggle="collapse" class="emailLinks" href="#timesUp">SUBJECT: Times up, {FIRSTNAME}....</a>
                         </h4>
                     </div>
                     <div id="timesUp" class="panel-collapse collapse">
@@ -843,6 +873,402 @@
 
     </div>
 
+    <div id="divEmailB2B" style="display:none">
+        <article>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1"> Subject: This should never happen…</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <p>In Michigan, an elderly woman, named Bimla, goes into surgery to have a bilateral jaw replacement. Instead, she has five holes drilled her head and part of her skull replaced.</p>
+
+                        <p>Another patient in that hospital needed that surgery, not Bimla. That mixup cost the hospital 21 million dollars. </p>
+
+                        <p>It cost Bimla, an elderly woman still recovering from a heart attack, her life.</p>
+
+                        <p>In a critical environment where so much can go wrong, it’s PatientCom's mission to make sure all goes right</p>
+
+                        <p>Our solution gives every clinical worker complete access to real-time, critical patient data.</p>
+
+                        <p>In the palm of their hand.</p>
+
+                        <p>To find out how PatientCom's wireless, secure platform can help you give your patients the best care possible, click here.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br />
+        <article>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2"> Subject: You don't know it all..</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <p>To the doctors it was pretty obvious. &nbsp;Small child. Red itchy, tiny blisters.</p>
+                        <p>Chickenpox.</p>
+                        <p>But what the doctors missed was the necrotizing fasciitis. &nbsp;It was close. After weeks of intensive care and three surgeries, the child survived and is thriving today.</p>
+                        <p>However, it was close. Too close.</p>
+                        <p>Medical diagnoses can be difficult even under the best circumstances. To be fair, secondary conditions like neurotic fasciitis have been documented. But if your clinician lacks experience or hasn&rsquo;t read the literature&hellip;</p>
+                        <p>PatientOne's MobileDiag helps fill in those knowledge gaps where the clinician may be lacking. MobileDiag gives the clinician a database of 100,000 disease presentations.&nbsp;</p>
+                        <p>At their fingertips.</p>
+                        <p>And at the patient's bedside. Where it matters most</p>
+                        <p>If you want to learn more, please visit www.mobilediag.com.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!----------Articles-->
+
+    <div class="head-block" id="divBeyondTheGame" style="display:none">
+
+        <h1>Heller reveals activities beyond game	</h1>
+
+        <div class="byline">By  <a href="http://dailybeacon.webfactional.com/staff/profiles/ernie-lipford/">Ernie Lipford</a>, Staff Writer</div>
+        <div id="timestamp">
+            <span class="pubdatetime">Thu Jan 31, 2002 </span>
+        </div>
+
+        <article>
+            <p>
+                There's more to University of Tennessee football than 22 guys dressed in helmets and pads, half of them dressed in orange and white, charging into one another. Football also includes cheerleaders, hours before the game, lining up in the bright autumn sun; band members fingering their instruments; bored gatekeepers, waiting for a ticket to tear and kids throwing pompoms at one another.
+                In More than the Game, Robert Heller, UT Professor of photojournalism, captured life around the playing field that is in many ways just as vivid as the game itself.
+                "I was always fascinated with the pageantry in all the major aspects of college football," Heller said.
+            </p>
+            <p>
+                Heller pursued that interest here at UT where the school extended Heller the courtesy of a field pass and allowed him to photograph whatever he wanted.
+                "I found that over the 15 years that I've been here, I've built up quite a collection of photographs that I believe are rather unique," he said. Heller estimates that for More than the Game he took between 5,000 and 7,000 pictures and from those, less than 150 made it into the book.
+            </p>
+            <p>
+                As to what criteria used to judge the pictures, Heller said, "I look at the composition of the photograph, the color, the point of view. I chose those pictures which were visually compelling to me...anything that might make a good picture is what I am interested in," Heller said.
+                More than the Game was not true photojournalism in the sense that it focused solely on the experiences of the people and events the photos displayed.
+            </p>
+            <p>
+                "It was my interpretation as an artist of the UT football experience," Heller said. "As the title suggests, the book is about everything that surrounds the game."
+                Heller's book neatly divides the pictures into eight broad areas - "The Fans," "The Band," "The Cheerleaders," "The Stadium," "The Officials," "The Players," "The Coaches," and, interesting enough, "The Media." With a grin on his face, Heller said that he further subdivided those categories and labeled them with titles not found in the book.
+                For instance, Heller unofficially calls pages 48-49 "the yelling page." It shows three individuals in orange, screaming at the action below them. Pages 40-41 is the "face painted page" showing three individuals faces painted in white and orange.
+            </p>
+            <p>
+                Patterns figure predominantly in the book. Indeed, much of Heller's work consists of careful editing as much as it does on photography. "More than the Game is a book of pictures making patterns as much as it is a book of pictures themselves. Whether it was a row of tubas lined up like little a row of mouths waiting to be fed or a row of cheerleaders who each have a big orange "T" painted on the same spot on her face, patterns find their way into the book.
+                "Sometimes it's interesting to have a close-up of one person, but sometimes its interesting to photograph a series of people wearing the same uniform, and kinda what happens to them," Heller said. "I mean, how can you go wrong taking a picture of tubas, they're so interesting, and when you have a row of them they're even more interesting."
+                One of the most interesting features about the book is the way Heller often grouped the photos together so that for attentive readers the photos would take on meanings outside of themselves.
+            </p>
+            <p>
+                "I had a chance to not only do the photography and the editing, but the design as well," he said. "That's kinda nice because when you're working with your own work, you want to present it the best way you can."
+                Heller went on to point out a number of places where he arranged his photos for a humorous effect. In one part of the book, Heller juxtaposes a picture of the actor David Keith (who, according to Heller, has been granted status as an "honorary coach") dressed as a coach above a picture of coach Phillip Fulmer.In another section there are two pictures of people placed side by side, so as they appear to be looking at one another -- one through a camcorder, the other through a pair of binoculars. Another set of pictures in the "Officials" section shows a picture of an official's cap above the picture of another official's waist which leads to a third picture on the next page of an official's arm. "It's as if what's missing is the face," Heller said. "It's kind of an amusing thing to have fun with," he added.
+            </p>
+            <p>
+                When asked how the book was selling, Heller replied "I don't know...the bookstore tells me it's selling well, and that there's a big market for this kind of book." Heller said that he is currently working on making portraits of Holocaust survivors accompanied by handwritten accounts of their experiences.
+                When asked what advice he had for emerging photographers interested in publishing their own books, Heller said, "Do your work because you have a passion for your work, not because you're trying sell a book or make money. When you have sizable amount of work that you think there's a market for, put it together in a coherent fashion. Do your research, find someone who might publish your work and send them a proposal. You never know."
+            </p>
+        </article>
+
+
+    </div>
+
+    <div id="divGetSpaceCenter" style="display:none">
+
+        <div class="head-block">
+
+            <h1>Space Institute needs funds to stay alive</h1>
+
+            <p><div class="byline">By  <a href="http://dailybeacon.webfactional.com/staff/profiles/ernie-lipford/">Ernie Lipford</a>, Staff Writer</div></p>
+            <p>
+                <div id="timestamp">
+                    <span class="pubdatetime">Published: Tue Apr 02, 2002</span>
+                </div>
+            </p>
+        </div>
+
+
+        <article>
+            You don't have to be a rocket scientist to appreciate the University of Tennessee Space Institute.<p>
+            <p> Technology paving the way for more fuel efficient cars, realistic special effects for Hollywood and possible new defenses against bioterrorism have been developed by researchers in this quiet corner of Middle Tennessee.</p>
+            <p>
+                For Dr. John Caruthers, Chief Operating Officer and Dean for Academic Affairs, it is the people as much as the facilities that have made UTSI what it is today.
+            <p>
+                "We have individuals from all over the world who are the best in their field working here," Caruthers said.
+            <p>
+                Unfortunately, this gem has seen better days. Big-money government contracts have dried up, the student population has fallen from a high of 350 to fewer than 100 and legislators, faced with a dwindling state budget, have questioned the importance and feasibility of keeping the institute open.
+            <p>
+                Few questioned UTSI's importance when it officially opened in 1964, when the country was in the middle of the space race with the Soviet Union. During that decade, UTSI lived up to its name, contributing to mankind's first lunar landing in 1969.
+            <p>
+                The idea for UTSI actually dates further back to the end of World War II when U.S. officials, after seeing how advanced German aviation was, decided that the United States needed to do something similar.
+            <p>
+                "It was really scary," Caruthers said. "The Germans had developed their theories and practical applications of supersonic flight to the point where, if they had waited a few years before starting the war ... we would have been in big trouble."
+            <p>
+                According to Caruthers, the Nazis succeeded in part because of the way they placed manufacturing centers close to technical schools, allowing professors and advanced students to apply their research quickly to a manufacturing environment. The famous aerodynamist, Theodore von Karman, recommended that the U.S. should build facilities to expand upon Nazi research and to associate those facilities with a university.
+            <p>
+                In 1964, UTSI began operation under the directorship of B.H. Goethert, a German scientist who worked under the Nazis during World War II. During the Cold War, UTSI assisted the Air Engineering Development Corporation in testing and developing aircraft and spacecraft design.
+            <p>
+                After the Berlin Wall fell, defense funding began to dry up and UTSI researchers started looking for civilian applications for UTSI research.
+            <p>
+                The civilian applications included methods for making better metal alloys to finding ways to make a softball travel faster and farther.
+            <p>
+                Biophysics is where some of the most exciting work is being done today. According to Caruthers, a UTSI researcher has developed a device that uses short laser bursts to read the genetic code of an individual. Such a device would be extremely useful in medicine, Caruthers said.
+            <p>
+                "We would have the entire code of a person. If someone were to walk into a doctor's office for a blood test ... we might be able to say to that person 'Man, if you live to this age, you will have a genetic predisposition for this or that. But if you address it now, you will have no problem.'"
+            <p>
+                UTSI research has even made it onto the silver screen. Recently, Hollywood has used UTSI researcher Dr. John Steinhoff's groundbreaking work in air flow modeling. Originally, Steinhoff's work was directed towards helping aircraft designers eliminate the whirlwind vortexes that form behind jet airplanes in flight. Steinhoff took the same technology that he used to model air flow around helicopter blades and aircraft wings, and applied it towards a problem area in the special effects world - creating realistic smoke.
+            <p>
+                People doing computer generated special effects are not physicists and the smoke they create looks more like a blob than a column of smoke, Steinhoff said. The producers of Jurassic Park III and The Mummy Returns used Steinhoff's methods to create smoke-filled scenes.
+            <p>
+                UTSI's success relies on its ability to produce cutting-edge research. But such research requires two things: money and talent. And for years, UTSI has been running low on both, especially after losing a major NASA contract several years ago.
+            <p>
+                "Losing the NASA contract hurt," Caruthers said.
+            <p>
+                As a result of having less money, he has had to make lots of changes.
+            <p>
+                "I've consolidated positions ... had to let some staff and non tenured faculty go."
+            <p>
+                According to Caruthers, the area where the lack of money really hurts is in attracting more talent.
+            <p>
+                "We don't have the money to invest in young new professors. UTSI has many professors who are tenured and close to retirement," Caruthers said.
+            <p>
+                Most of these professors are very experienced in the subjects they teach, but they don't necessarily produce the kind of research that attracts funding.
+            <p>
+                "A lot of the professors here work in traditional aerodynamics," Caruthers said. "We need younger professors doing research in more cutting edge research ... in space technology and health physics, for instance."
+            <p>
+                Caruthers believes that most of UTSI funding problems can be solved. He envisions a "cooperative" environment where UTSI will take on research oriented faculty and graduate students who will work under them. Graduate students who need classes at UT proper can take those classes via television or the Internet, eliminating the need to move professors not directly involved in institute research to the campus.
+            <p>
+                At the present the future of UTSI is unclear.
+            <p>
+                Dr. John Prados, a professor in the College of Engineering, is chairing a committee looking into the future of UTSI.
+            <p>
+                Prados said that the committee is in the information gathering stage at the moment.
+            <p>
+                "At this point in time, we haven't even formulated the recommendations ... but my guess is that there would have to be some consolidations and shifting of personnel."
+            <p>
+                But according to Dr. Loren Crabtree, provost and vice president for Academic Affairs and the person who the committee is reporting to, "All options are open ... We will work with the UTSI leadership to make it a more viable institution."
+            <p>
+                Like Prados, Crabtree is waiting on the committee to make its recommendations.
+            <p>
+                "We'll see where it takes us," Crabtree said.
+            <p>
+                Caruthers remains optimistic on future of UTSI.
+            <p>
+                "We have the opportunity to do something very special ... and build a renowned institution ... I'm looking to take advantage of that," Caruthers said.
+
+        </article>
+    </div>
+
+    <div id="divGetHopeCenter" style="display:none">
+
+
+        <h2>Center helps patients with AIDS | The Daily Beacon</h2>
+
+
+
+        <article>
+            <p> Hope for AIDS victims lives on the seventh floor of Fort Sanders Medical Center, according to Dr. Jeannie Gillian. "People with AIDS have choices; you either sit down or pick up the baton and start marching," said Gillian, director of services for the Hope Center. <p>
+                The Hope Center helps people who have found out that they are HIV positive and guides them through the turbulent waters of living with AIDS. The center was established in 1996 following a two year study conducted by Dr. Gillian designed to find out how a group of men and women living with the virus "experienced hope," Gillian said.
+            </p>
+            <p>
+                The purpose of the center, as expressed in an information packet the center puts out, "is to educate and care for AIDS victims and their families in a professional environment, free from judgment."
+            <p>
+                It's important to distinguish HIV and AIDS: HIV is the presence of the virus in the body and AIDS refers to the disease when it manifests itself by way of symptoms.
+            <p>
+                In fact, Gillian rarely uses the word AIDS when describing a patient's condition since more live longer with the disease than with AIDS. "Now we use the term HIV disease - we don't use the word AIDS because we don't know if they have AIDS," she said. "Living with HIV disease is no different than living with cancer, leukemia, heart disease, or diabetes."
+            <p>
+                Still, life does become more complicated whether one is simply HIV positive or they have the full-blown version of the disease. "Survival skills" are needed, Gillian said. "You need to learn about the illness, and the medical conditions surrounding the illness," Gillian said.
+            <p>
+                One woman found out how much she had to learn about the disease. "I was a normal person ... I never thought it would happen to us," said Carol Ann McMillan, whose brother, Charles "Chucky" Moyers, died of AIDS after several years of being HIV positive.
+            <p>
+                According to McMillan, Dr. Gillian did everything from helping the McMillans interact with the myriad doctors and medical professionals the family encountered while Moyers was sick to providing emotional support to Moyers and his family. "Dr. Gillian really comes into play with people when everything is at it's worst," she said.
+            <p>
+                Other people have given praises to Dr. Gillian, like Jack Moore, a volunteer at the center who is HIV positive. "If you have a question, you call Dr. Gillian. If there's a crisis, you call Dr. Gillian ... Jeannie and the Hope Center - they advocate for their clients," he said.
+            <p>
+                Despite the fact that people still believe AIDS to be a "gay disease" it isn't. "More heterosexuals, especially women, are affected by it," Gillian said. "That's what the disease does, it catches people off guard. People think that they're not going to catch it because they're not a white gay man, and that's the horror of it because you can't get people to understand that it's a medical problem, it's a public health problem."
+            <p>
+                Gillian mentioned talking to a young man years ago who had AIDS. "He was athletic, attractive," she said. "He told me that he could have had sex here every night of the week. He said that he asked this girl one time 'Aren't you concerned about getting anything' and she told him 'Why no, you don't look like you would have anything.'"
+            <p>
+                Gillian said that fortunately the young man, who was gay, never did have sex with any of the girls.
+            <p>
+                And so given the widespread ignorance of HIV and AIDS on campus and in the community, the center places a lot of emphasis on educating the public about the disease. Gillian herself lectures at UT, and is surprised at how little students know about the subject.
+            <p>
+                "They don't have a clue," Gillian said. "I have to start from the beginning: 'What is HIV; how do you find out if you have HIV; how long does it take before you get sick? I have to answer all of these basic, high school-type questions."
+            <p>
+                Along with Gillian's guest lectures, the center hosts workshops, and participates in events that focus on building AIDS and HIV awareness. One big project in particular is the NAMES Project, a quilt built by family members and friends who contribute a panel at a time in memory of a person who succumbed to the disease.
+            <p>
+                But for Gillian, HIV or AIDS education should be more basic than any event or community workshop. "We teach our kids to look both ways before crossing the street ... we should be teaching them how to have safe sex," Gillian said.<article></article>
+
+        </article>
+    </div>
+
+    <!-------------Blog---------------->
+    <div id="divBlog" style="display:none">
+        <article>
+            <h4>August 28,2017</h4>
+
+            <p align="center"><h2>Selling Your Business Using Your Story</h2></p>
+
+            <p>
+                Sometime in 2010, journalist Rob Walker took cheaply purchased objects-the
+                objects averaged $1.25 apiece- and gave each over to a writer who then created a story around the object. The idea was that the story would give the object greater significance than it would have otherwise.
+            </p>
+            <p>
+                To test the theory out, each object was sold on eBay.
+            </p>
+            <p>
+                The eBay description included the story of the object. In addition, buyers were told explicitly that the story was fictitious. Let me repeat, the buyers knew prior to buying each object that the object's story was made up! But buyers scooped up the objects for the asking price, regardless.
+            </p>
+            <p>
+                So how did the objects do? The Project reports that $128.74 worth of junk sold for $3,612.51. That's easily over a thousand percent profit! What was the only difference between these objects and stuff you would find at your local yard sale?
+            </p>
+            <p>
+                A story.
+            </p>
+            <strong>
+                <br clear="all" />
+            </strong>
+            <p>
+                <strong></strong>
+            </p>
+            <p align="center">
+                <strong>Why Your Business Need Stories and Brands</strong>
+            </p>
+            <p>
+                Stories are the heart of content marketing. What do they do?
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        · They get your customer's attention
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        · They help you define a customer's problem and tell the customer how your
+                        product or service solves their problem.
+                    </p>
+                </li>
+            </ul>
+
+
+            <p>
+                Today the marketplace has become busier than ever. Thanks to the internet and companies like Amazon and Alibaba, there are more products and companies selling those products than ever. If you have a credit card and decent amount of credit you can find a supplier that will sell you XYZ
+                product in bulk that you can turn around and sell at a markup. As can your competitor.
+            </p>
+            <p>
+                And then the sales go to whoever has the lowest price. And that's fine-if
+                you are Walmart, Lowes, whoever.
+            </p>
+            <p>
+                If can't compete on price, you have to compete in some other way. One way is to differentiate your product. In other words, my competitor is selling XYZ while I'm selling XYZ with a twist.
+            </p>
+            <p>
+                How do you create that twist? With a story.
+            </p>
+            <p align="center">
+                <strong>A story says it all</strong>
+            </p>
+            <p>
+                What is a story? It's the relationship between someone and their circumstances as that someone tries to solve a problem.
+            </p>
+            <p>
+                "I was out hunting and was attacked by a saber-toothed tiger. Using this little trick I know
+                and a little luck, I got away" said one cave man to another, many thousands
+                of years ago.
+            </p>
+            <p>
+                "I have all this clutter-soap, shampoo, towels- in my shower! I was beside myself until I got the best shower caddy ever. And a great deal to boot!"
+                says one parent to another in modern America.
+            </p>
+            <p>
+                Each of the statements above is the kernel of a story. Each has a
+                protagonist-the person telling the story, and a plot or series of events that outlined the problem and solution. Stories have been around since the dawn of humanity, and in today's world, most of us spend our lives either hearing or telling stories or both.
+            </p>
+            <p>
+                Why? Entertainment, obviously. But stories also do something else. The one caveman listens to the other tell his story of missing the saber tooth tiger. As that caveman listens he imagines what he would do if he were in the same situation. The friend listens to the parent's solution to a
+                domestic dilemma. As they listen, they also imagine their own problems and apply the teller of the tale's solution to their own.
+            </p>
+            <p>
+                In short, stories help us survive and thrive. Every second, eleven million pieces of information flood our senses. We can process maybe forty of those pieces at any given moment. What about other animals? Most don't bother.
+                They rely on what we know as reflexes or instincts. Instincts enable animals to do mainly what psychologists sometimes call the "four fs":  feeding, fighting, fleeing, and… mating.
+            </p>
+            <p>
+                But the lives of us humans are obviously way more complex. We form deep relationships with friends and family, write poetry and math theorems,
+                build structures and businesses. The various enterprise people take on require focus, forming priorities, and making decisions. How does someone take over eleven million pieces of information and use that to build a
+                house, a business, or a non-profit organization?
+            </p>
+            <p>
+                They use stories. "I want a house that is three thousand square feet, has a
+                dine in kitchen and sits on enough land where I can put my vegetable garden
+                and start a beehive."
+            </p>
+            <p>
+                "I have this great idea for a business. If I could get business to follow
+                my system they would save so much money All I need is some capital- an
+                investor or two. know this guy-I need to set up a meeting"
+            </p>
+            <p>
+                "The world would be a better place if we had more people and attention given to this cause. "
+            </p>
+            <p>
+                Or.
+            </p>
+            <p>
+                "This is given me so much problem. I can't believe someone hasn't invented
+                something to take care of this for me!"
+            </p>
+            <p>
+                Or.
+            </p>
+            <p>
+                "This problem is really putting a crimp on production. It might be worth it
+                to somebody to get someone or something
+            </p>
+            <p align="center">
+                <strong>See Your Customer's Story Your Own</strong>
+            </p>
+            <p>
+                Humans work through problems using stories. If you can craft a story that coincides with the problem in their story then you can create interest and an angle for what you're selling. In turn, that will arouse the curiosity of a potential customer and hopefully lead to a sale.
+            </p>
+            <p>
+                Let's say you own an airplane and you have a small business flying customers around to cities in your region. It costs way more to fly with you than it does a regular airline. You only fly certain areas, and you don't fly twenty-four seven. But there are smaller charter airlines and private pilots who offer the same service. They fly in the same region and the same routes as you.
+            </p>
+            <p>
+                You have to differentiate yourself. How?
+            </p>
+            <p>
+                Your business performs the same service as many other similar businesses,
+                but it is not the same as other businesses. What is the difference?
+            </p>
+            <p>
+                You. And the way you explain that difference is through a story.
+            </p>
+            <p>
+                Let's say you've always wanted to be a pilot. Maybe you started flying when you were young in like the Civil Air Patrol, you flew in the service, flew as a missionary bush pilot, or maybe you went to school somewhere and trained, whatever. It doesn't matter what your history is, you just have to tie it into the problem the customer has. Let's say you started out training at an aerospace college somewhere and eventually worked for an airline.
+            </p>
+            <p>
+                But you hated working for the airlines. The bureaucracy, the waits, the hassle with passengers who had issues that you had no control over as an employee of a company. You noted all the things that passengers hate about flying: long waits, cramped seats, layovers, etc. You came up with a
+                solution and executed it. Now, your air service carries passengers point to point, no hassle waiting, and they can walk out of the terminal to the plane. As a plus, you're personable and get along well with people.
+            </p>
+            <p>
+                And there, Mr. Ex Airline-now-CEO-of-your-own-charter-business, there's your story. You the protagonist saw a problem, and you came to the rescue and fixed it. More importantly, in your marketing, you reveal a
+                little about yourself during your story. You like people and want to help them get where they're going quickly and comfortably. That builds rapport and makes you a person-different from any other pilot or service out.
+                Because as you and I know, there is no other person like you.
+            </p>
+            <p>
+                And you are the only one who can tell your story. That's on you.
+            </p>
+
+
+
+
+
+        </article>
+    </div>
+
+
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -858,13 +1284,16 @@
                         Thanks! I'll be in touch shortly!
                     </p>
                 </div>
-                <div class="modal-body">
-                    <p id="txtEmailFail" style="display:none">
+                <div class="modal-body" id="modalBodyFail" style="display:none">
+                    <p id="pProbServer">
                         Looks like there is a problem with my server. <a href="mailto:ernestlipford@integralmessaging.com?Subject=PotentialClient%20again" target="_top">Click here to send me an email.</a>
                     </p>
+                    <p id="txtMsg">
+                        Here's your message:
+                    </p>
                 </div>
-                <div class="modal-body">
-                    <p id="txtNoConnect" style="display:none"></p>
+                <div class="modal-body" id="modalBodySuccess" style="display:none">
+                    <p id="txtEmailFail"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="modalCloseBtn" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -881,59 +1310,126 @@
                 in: { effect: 'tada' },
                 out: { effect: 'flipOutY' }
             });
+
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+
+
+
+
+            $('#homeLink').click(function () {
+                $('#main').html($('#home').html());
+            });
+
+            $('#aboutLink').click(function () {
+                $('#main').html($('#about').html());
+            });
+
+            $('#emailB2CLink').click(function () {
+                $('#main').html($('#divEmail').html());
+            });
+
+            $('#emailB2BLink').click(function () {
+                $('#main').html($('#divEmailB2B').html());
+            });
+
+            $('#beyondTheGameLink').click(function () {
+                $('#main').html($('#divBeyondTheGame').html());
+            });
+
+            $('#hopeCenterLink').click(function () {
+                $('#main').html($('#divGetHopeCenter').html());
+            });
+
+            $('#spaceCenterLink').click(function () {
+                $('#main').html($('#divGetSpaceCenter').html());
+            });
+
+            $('#blogLink').click(function () {
+                $('#main').html($('#divBlog').html());
+            });
+
+
+
+            $('#modalCloseBtn').click(function () {
+                $('#txtName').val('');
+                $('#txtEmail').val('');
+                $('#txtPhone').val('');
+                $('#txtMessage').val('');
+            });
         });
+    </script>
 
-
-        $('#homeLink').click(function () {
-            $('#home').html($('#main').html());
-        });
-
-        $('#aboutLink').click(function () {
-            $('#about').html($('#main').html());
-        });
-
-        $('#contactLink').click(function () {
-
-        });
-
-        $('#btnSubmit').click(function () {
-            event.preventDefault();
-            var contactObject = {
-                Name : $('#txtName').val(),
-                Phone: $('#txtEmail').val(),
-                Email: $('#txtPhone').val(),
-                Message: $('#txtMessage').val(),
-            };
-
-            $.ajax({
-                url: '@Url.Action("SendEmail","Contact")',
-                type: "POST",
-                data: JSON.stringify(contactObject),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                error: function (response) {
-                   
-            },
-                success: function (response) {
-                    if (response.Message = "Fail") {
-                        $('.modal-title').append("Oops! It looks like the email didn't go through!");
-                        $("#myModal").modal();
-                        $('#txtEmailFail').show();
+    <script type="text/javascript">
+        $('#contactForm')
+            .validate({
+                rules: {
+                    name: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                    },
+                    message: {
+                        required: true,
                     }
-                    else {
-                        $('.modal-title').append("Success!");
-                        $('#txtSuccess').show();
+                },
+                messages: {
+                    name: {
+                        required: "Please enter name",
+                    },
+                    email: {
+                        required: "Please enter valid email",
+                    },
+                    message: {
+                        required: "Please give a brief description of what you want to do.",
                     }
+                },
+                submitHandler: function (form) {
+                    $('#spinner').show();
+                    var contactObject = {
+                        Name: $('#txtName').val(),
+                        Phone: $('#txtEmail').val(),
+                        Email: $('#txtPhone').val(),
+                        Message: $('#txtMessage').val(),
+                    };
+
+                    // Use Ajax to submit form data
+                    $.ajax({
+                        url: '@Url.Action("SendEmail","Contact")',
+                        type: "POST",
+                        data: JSON.stringify(contactObject),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        error: function (response) {
+
+                        },
+                        success: function (response) {
+                            if (response.Message == "Fail") {
+                                $('.modal-title').append("Oops there was problem!");
+                                $('.modal-body').show();
+                                $('#txtMsg').append($('#txtMessage').val());
+                                $('#spinner').hide();
+                            }
+                            else {
+                                $('#spinner').hide();
+                                $('.modal-title').append("Success!");
+                                $('#txtSuccess').show();
+                            }
+                            $("#myModal").modal();
+                        }
+                    });
+
                 }
-            });           
-        });
 
-        $('#modalCloseBtn').click(function () {
-            $('#txtName').val('');
-            $('#txtEmail').val('');
-            $('#txtPhone').val('');
-            $('#txtMessage').val('');            
-        });
+            });
+
+
+
 
     </script>
 
