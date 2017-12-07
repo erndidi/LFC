@@ -23,6 +23,17 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-business-casual.git"
+  },
+
+
+  "version": "1.0.0",
+  "Name": "ASP.NET",
+  "private": true,
+  "devDependencies": {
+  },
+  "dependencies": {
+    "vue": "^1.0.26"
   }
+
 
 }

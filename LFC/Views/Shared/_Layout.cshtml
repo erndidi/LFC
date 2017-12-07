@@ -11,11 +11,12 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Gravitas+One:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
+    <link href=@Url.Content("~/Content/app.css") rel="stylesheet" />
     @*<link href=@Url.Content("~/css/jquery-ui.css") rel="stylesheet" />
         <link href=@Url.Content("~/css/jquery-ui.structure.css") rel="stylesheet" />
         <link href=@Url.Content("~/css/jquery-ui.theme.css") rel="stylesheet" />*@
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src=@Url.Content("~/Scripts/jquery-3.2.1.min.js")></script> 
     <script src=@Url.Content("~/Scripts/bootstrap.js") async></script>
     <script src=@Url.Content("~/Scripts/jquery.validate.min.js") async></script>
     <script src=@Url.Content("~/Scripts/jquery.lettering-0.6.1.min.js") async></script>
@@ -23,125 +24,160 @@
 
 
     <!-- Custom styles for this template -->
-
-    <link href="~/css/business-casual.css" rel="stylesheet" />
+    @*<link href="~/css/business-casual.css" rel="stylesheet" />*@
 </head>
 <body>
-    <div class="row">
-        <nav class="navbar navbar-default">
-            <div class="container">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <a href="../" class="navbar-brand">Bootswatch</a>
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-main">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="themes">
+                                    <li><a id="default" href="#">Default</a></li>
+                                    <li class="divider"></li>
+                                    <li><a id="cerulean" href="#">Cerulean</a></li>
+                                    <li><a href="../cosmo/">Cosmo</a></li>
+                                    <li><a href="../cyborg/">Cyborg</a></li>
+                                    <li><a href="../darkly/">Darkly</a></li>
+                                    <li><a href="../flatly/">Flatly</a></li>
+                                    <li><a href="../journal/">Journal</a></li>
+                                    <li><a href="../lumen/">Lumen</a></li>
+                                    <li><a href="../paper/">Paper</a></li>
+                                    <li><a href="../readable/">Readable</a></li>
+                                    <li><a href="../sandstone/">Sandstone</a></li>
+                                    <li><a href="../simplex/">Simplex</a></li>
+                                    <li><a href="../slate/">Slate</a></li>
+                                    <li><a href="../solar/">Solar</a></li>
+                                    <li><a href="../spacelab/">Spacelab</a></li>
+                                    <li><a href="../superhero/">Superhero</a></li>
+                                    <li><a href="../united/">United</a></li>
+                                    <li><a href="../yeti/">Yeti</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a id="help" href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="http://news.bootswatch.com">Blog</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Readable <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="download">
+                                    <li><a href="http://jsfiddle.net/bootswatch/pxg6fkqo/">Open Sandbox</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                                    <li><a href="./bootstrap.css">bootstrap.css</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="./variables.less">variables.less</a></li>
+                                    <li><a href="./bootswatch.less">bootswatch.less</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="./_variables.scss">_variables.scss</a></li>
+                                    <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
-                <div id="navbar" class="navbar-collapse collapse navbar-toggler">
-                    <ul class="nav navbar-nav" style="font-size:14px">
-                        <li class="active"><a id="homeLink" href="#">Home</a></li>
-                        <li><a id="aboutLink" href="#">About Me</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Writing<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-submenu">
-                                    <a id="emailLink" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Email</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a id="emailB2CLink" href="#">Email B2C</a></li>
-                                        <li><a id="emailB2BLink" href="#">Email B2B</a></li>
-                                    </ul>
-                                </li>
-                                <li><a id="directMailLink" href='@Url.Content("~/Content/Show your kids where money grows .pdf")'>Direct Mail</a></li>
-                                <li class="dropdown-submenu">
-                                    <a href="#" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a id="beyondTheGameLink" href="#">Beyond The Game</a></li>
-                                        <li><a id="hopeCenterLink" href="#">Center helps patients with AIDS</a></li>
-                                        <li><a id="spaceCenterLink" href="#">Space Institute needs funds to stay alive</a></li>
-                                    </ul>
-                                </li>
-                                <li><a id="blogLink" href="#">Blog</a></li>
-                                @*<li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>*@
-                            </ul>
-                        </li>
-                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+                            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+                        </ul>
 
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
+                    </div>
 
-        </nav>
-    </div>
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-xs-3">
-               
-            </div>
-            <div class="col-xs-6">
-                @*<div class="tagline-upper text-left text-heading text-shadow text-dark mt-5 d-none d-lg-block" style="color: #beab19; font-family:'Gravitas One'; font-size:48px">Xact Messaging</div>*@
-                <div>                                     
-                    <img src="~/images/CompanyName.svg" />
                 </div>
-               
             </div>
-            <div class="col-xs-3" style=" text-align:left;font-size: 14px;color: #beab19; padding-right:0px">
-                @*<div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block"> Copyright &copy; Integral Messaging 2017</div>*@
-                <div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">OWNER: ERNEST LIPFORD</div>
-                <div style="height:auto; font-size:18px; font-weight:bold" class="tagline-lower text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">Phone: 615-428-8570, skype: ernest.lipford</div>
+            <div class="row">
+                <div style="align-content:center; padding-left:50px">
+
+                    <svg version="1.1"
+                         viewBox="0 -50 700 100" preserveAspectRatio="none">
+                       
+                            <defs>
+                                <filter id="f3" x="0" y="0" width="200%" height="100%">
+                                    <feOffset result="offOut" in="SourceAlpha" dx="20" die="20" />
+                                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                                </filter>
+                            </defs>
+
+                            <text style="fill:black; font-family:'Gravitas One'; font-size:54px">
+                               XACT
+                               Messaging
+                            </text>
+                              
+                       
+                    </svg>
+
+                </div>
+            </div>
+            <div class="row">
+                <div id="main" class="col-xs-6" style="padding-right:10px; text-align:justify; padding-top:10px">
+                    @RenderBody()
+
+
+                </div>
+                <div class="col-xs-6" style="padding-left:10px;  margin-left:0px; padding-top:10px; width:70%">
+                    <form id="contactForm" class="form-inline">
+                        <fieldset>
+                            <legend>Contact Me</legend>
+                            <div class="form-group">
+                                @*<label for="lblName">Name</label>*@
+                                <input type="text" class="form-control" name="name" id="txtName" placeholder="Enter name" minLength="2" required>
+                            </div>
+                            <div class="form-group">
+                                @*<label for="lblEmail">Email address</label>*@
+                                <input type="email" name="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                @*<label for="lblMessage">Phone</label>*@
+                                <input type="text" name="phone" class="form-control" id="txtPhone" placeholder="Enter Phone">
+                            </div>
+                            <div class="form-group">
+
+                                <textarea name="message" class="form-control" rows="5" id="txtMessage" placeholder="Message" required></textarea>
+                            </div>
+
+                            <button id="btnSubmit" class="btn btn-primary has-spinner"><i class="fa fa-spinner fa-spin"></i>Submit</button>
+                            <div id="spinner" style="display:none">
+                                <p>Sending:</p>
+                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                            </div>
+
+
+
+                        </fieldset>
+                    </form>
+                </div>
 
             </div>
         </div>
+        <div class="container-mod" style="margin-right:10%">
 
+            <div class="row" style="width:100%; margin-right:10px;">
+                <div class="col-xs-2" style="padding-right:10px; margin-right:70px; padding-top:10px;color: #be193f; font-size:16px">
+                    @*<ul>
+                            <li>Email Marketing</li>
+                            <li>Direct Mail</li>
+                            <li>Articles</li>
+                            <li>Works On Spec</li>
+                        </ul>*@
 
-
-        @*<div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-dark mb-5 d-none d-lg-block">Phone: 615-847-8911, Skype:ernest.lipford</div>*@
-    </div>
-    <div class="container-mod" style="margin-right:10%">
-
-        <div class="row" style="width:100%; margin-right:10px;">
-            <div class="col-xs-2" style="padding-right:10px; margin-right:70px; padding-top:10px;color: #be193f; font-size:16px">
-                @*<ul>
-                    <li>Email Marketing</li>
-                    <li>Direct Mail</li>
-                    <li>Articles</li>
-                    <li>Works On Spec</li>
-                </ul>*@
-
-            </div>
-            <div id="main" class="col-xs-6" style="padding-right:10px; text-align:justify; padding-top:10px">
-                @RenderBody()
-
-
-            </div>
-            <div class="col-xs-4" style="padding-left:10px;  margin-left:90px; padding-top:10px; width:20%">
-                <form id="contactForm" class="form-inline">
-                    <fieldset>
-                        <legend>Contact Me</legend>
-                        <div class="form-group">
-                            @*<label for="lblName">Name</label>*@
-                            <input type="text" class="form-control" name="name" id="txtName" placeholder="Enter name" minLength="2" required>
-                        </div>
-                        <div class="form-group">
-                            @*<label for="lblEmail">Email address</label>*@
-                            <input type="email" name="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            @*<label for="lblMessage">Phone</label>*@
-                            <input type="text" name="phone" class="form-control" id="txtPhone" placeholder="Enter Phone">
-                        </div>
-                        <div class="form-group">
-                            
-                            <textarea name="message" class="form-control" rows="5" id="txtMessage" placeholder="Message" required></textarea>
-                        </div>
-
-                        <button id="btnSubmit" class="btn btn-primary has-spinner"><i class="fa fa-spinner fa-spin"></i>Submit</button>
-                        <div id="spinner" style="display:none">
-                            <p>Sending:</p>
-                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                        </div>
-
-
-
-                    </fieldset>
-                </form>
-            </div>
+                </div>
+              
+            </div><!--/.container-fluid -->
+       
         </div>
         <div class="row text-center">
             <footer class="bg-faded text-lg-left py-5">
@@ -333,7 +369,7 @@
 
                             </div>
                         </article>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <br />

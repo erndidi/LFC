@@ -250,7 +250,6 @@
     <Content Include="images\slide-3.jpg" />
     <Content Include="Content\Sell your business by selling your story.pdf" />
     <Content Include="Content\files\Sell_your_story.pdf" />
-    <Content Include="mail\contact_me.php" />
     <Content Include="Samples\DirectMail\Show your kids where money grows .docx" />
     <Content Include=".travis.yml" />
     <Content Include="LICENSE" />
@@ -259,6 +258,10 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\Show your kids where money grows .pdf" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
@@ -355,18 +358,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap.min.css.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap.css.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
