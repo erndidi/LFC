@@ -5,23 +5,18 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" />
-    <link href=@Url.Content("~/Content/animate.css") rel="stylesheet" />
+    <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" />   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Gravitas+One:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
     <link href=@Url.Content("~/Content/app.css") rel="stylesheet" />
-    @*<link href=@Url.Content("~/css/jquery-ui.css") rel="stylesheet" />
-        <link href=@Url.Content("~/css/jquery-ui.structure.css") rel="stylesheet" />
-        <link href=@Url.Content("~/css/jquery-ui.theme.css") rel="stylesheet" />*@
+  
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src=@Url.Content("~/Scripts/jquery-3.2.1.min.js")></script> 
     <script src=@Url.Content("~/Scripts/bootstrap.js") async></script>
-    <script src=@Url.Content("~/Scripts/jquery.validate.min.js") async></script>
-    <script src=@Url.Content("~/Scripts/jquery.lettering-0.6.1.min.js") async></script>
-    <script src=@Url.Content("~/Scripts/jquery.textillate.js") async></script>
-
+    <script src="~/Scripts/jquery.validate.js"></script>
+   
 
     <!-- Custom styles for this template -->
     @*<link href="~/css/business-casual.css" rel="stylesheet" />*@
@@ -30,9 +25,10 @@
     <div class="container">
         <div class="jumbotron">
             <div class="row">
+                @*<div class="col-xs-4"*@
                 <div class="navbar navbar-inverse">
                     <div class="navbar-header">
-                        <a href="../" class="navbar-brand">Bootswatch</a>
+                        @*<a href="../" class="navbar-brand">Bootswatch</a>*@
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -41,64 +37,57 @@
                     </div>
                     <div class="navbar-collapse collapse" id="navbar-main">
                         <ul class="nav navbar-nav">
+                            <li>
+                                <a id="homeLink" href="#">Home</a>
+                            </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-                                <ul class="dropdown-menu" aria-labelledby="themes">
-                                    <li><a id="default" href="#">Default</a></li>
-                                    <li class="divider"></li>
-                                    <li><a id="cerulean" href="#">Cerulean</a></li>
-                                    <li><a href="../cosmo/">Cosmo</a></li>
-                                    <li><a href="../cyborg/">Cyborg</a></li>
-                                    <li><a href="../darkly/">Darkly</a></li>
-                                    <li><a href="../flatly/">Flatly</a></li>
-                                    <li><a href="../journal/">Journal</a></li>
-                                    <li><a href="../lumen/">Lumen</a></li>
-                                    <li><a href="../paper/">Paper</a></li>
-                                    <li><a href="../readable/">Readable</a></li>
-                                    <li><a href="../sandstone/">Sandstone</a></li>
-                                    <li><a href="../simplex/">Simplex</a></li>
-                                    <li><a href="../slate/">Slate</a></li>
-                                    <li><a href="../solar/">Solar</a></li>
-                                    <li><a href="../spacelab/">Spacelab</a></li>
-                                    <li><a href="../superhero/">Superhero</a></li>
-                                    <li><a href="../united/">United</a></li>
-                                    <li><a href="../yeti/">Yeti</a></li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Writing<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a id="emailLink" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Email</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a id="emailB2CLink" href="#">Email B2C</a></li>
+                                            <li><a id="emailB2BLink" href="#">Email B2B</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a id="directMailLink" href='@Url.Content("~/Content/Show your kids where money grows .pdf")'>Direct Mail</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="test" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a id="beyondTheGameLink" href="#">Beyond The Game</a></li>
+                                            <li><a id="hopeCenterLink" href="#">Center helps patients with AIDS</a></li>
+                                            <li><a id="spaceCenterLink" href="#">Space Institute needs funds to stay alive</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                  
                                 </ul>
                             </li>
                             <li>
-                                <a id="help" href="#">Help</a>
+                                <a id="aboutLink" href="#">About</a>
                             </li>
                             <li>
-                                <a href="http://news.bootswatch.com">Blog</a>
+                                <a id="blogLink" href="#">Blog</a>
                             </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Readable <span class="caret"></span></a>
-                                <ul class="dropdown-menu" aria-labelledby="download">
-                                    <li><a href="http://jsfiddle.net/bootswatch/pxg6fkqo/">Open Sandbox</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
-                                    <li><a href="./bootstrap.css">bootstrap.css</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="./variables.less">variables.less</a></li>
-                                    <li><a href="./bootswatch.less">bootswatch.less</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="./_variables.scss">_variables.scss</a></li>
-                                    <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
-                                </ul>
-                            </li>
+                            @*<li>
+                                <a id="contact" href="#">Contact Me</a>
+                            </li>*@
+                         
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-                            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+                            <li><a href="#" target="_blank">B2B Software Copy</a></li>
+                            <li><a href="#" target="_blank">Healthcare Copy</a></li>
+                            <li><a href="#" target="_blank">Technology Copy</a></li>
+                           
                         </ul>
 
                     </div>
 
                 </div>
-            </div>
+            </div><!--end row-->
             <div class="row">
-                <div style="align-content:center; padding-left:50px">
+                <div class="col-xs-9" style="align-content:center; padding-left:50px">
 
                     <svg version="1.1"
                          viewBox="0 -50 700 100" preserveAspectRatio="none">
@@ -111,7 +100,7 @@
                                 </filter>
                             </defs>
 
-                            <text style="fill:black; font-family:'Gravitas One'; font-size:54px">
+                            <text style="fill:black; font-family:'Gravitas One'; font-size:48px">
                                XACT
                                Messaging
                             </text>
@@ -120,6 +109,10 @@
                     </svg>
 
                 </div>
+                <div class="col-xs-3" style="padding-top:10px">
+                    <img src="~/Content/headshot.jpg" />
+                </div>
+
             </div>
             <div class="row">
                 <div id="main" class="col-xs-6" style="padding-right:10px; text-align:justify; padding-top:10px">
@@ -127,8 +120,8 @@
 
 
                 </div>
-                <div class="col-xs-6" style="padding-left:10px;  margin-left:0px; padding-top:10px; width:70%">
-                    <form id="contactForm" class="form-inline">
+                <div class="col-xs-6" style="padding-left:10px;  margin-left:0px; padding-top:10px; width:40%">
+                    <form id="contactForm"  >
                         <fieldset>
                             <legend>Contact Me</legend>
                             <div class="form-group">
@@ -149,7 +142,7 @@
                                 <textarea name="message" class="form-control" rows="5" id="txtMessage" placeholder="Message" required></textarea>
                             </div>
 
-                            <button id="btnSubmit" class="btn btn-primary has-spinner"><i class="fa fa-spinner fa-spin"></i>Submit</button>
+                            <button id="btnSubmit" class="btn btn-primary has-spinner">Submit</button>
                             <div id="spinner" style="display:none">
                                 <p>Sending:</p>
                                 <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
@@ -162,31 +155,28 @@
                 </div>
 
             </div>
-        </div>
+            <div class="row text-center">
+                <footer class="footer">                    
+                        <div class="row">
+                            <div class="col-xs-4">
+                                OWNER: Ernest Lipford
+                            </div>
+                            <div class="col-xs-4">
+                                Email: ernestlipford@xactmessaging.com
+                            </div>
+                            <div class="col-xs-4">
+                                Phone: 615-496-3898
+                            </div>
+                        </div>
+                </footer>
+            </div>
+        </div><!--end of jumbotron--->
         <div class="container-mod" style="margin-right:10%">
 
-            <div class="row" style="width:100%; margin-right:10px;">
-                <div class="col-xs-2" style="padding-right:10px; margin-right:70px; padding-top:10px;color: #be193f; font-size:16px">
-                    @*<ul>
-                            <li>Email Marketing</li>
-                            <li>Direct Mail</li>
-                            <li>Articles</li>
-                            <li>Works On Spec</li>
-                        </ul>*@
-
-                </div>
-              
-            </div><!--/.container-fluid -->
+           
        
         </div>
-        <div class="row text-center">
-            <footer class="bg-faded text-lg-left py-5">
-                <div class="container">
-
-                </div>
-
-            </footer>
-        </div>
+   
 
         <!-- /.container -->
 
@@ -198,38 +188,11 @@
 
     <div id="home" style="display:none">
 
-        <article style="font-size:16px;">
-
-
-
+        <article style="font-size:12px;">
             <p>
-                No matter what you business, your customers are going to want to know two
-                things.
+                You need copy that tells your customer your solution solves their problem.
             </p>
-            <ul>
-                <li>
-                    What do you have to offer?
-                </li>
-                <li>
-                    Why should I or my business care?
-                </li>
-            </ul>
-            <p>
-                My copy will answer both of those questions.
-            </p>
-            <div>
-                <strong>
-                    It gets their attention. And it builds rapport
-                </strong>
-            </div>
-            <br />
-            <p>
-                Before anything else you have to get noticed. You need copy that
-                tells your customer something that they never heard before. Or it tells
-                them what they know or think they know, but in a way that shows them
-                their problem in a different light.
-            </p>
-            <p>My copy shows them that you're solution is their solution</p>
+            <p>The copy I write does just that.</p>
 
             <p>
                 But rather than just have me tell you what I can do, let me show you. I
@@ -240,6 +203,8 @@
                 So get in touch and let me know what you're trying to achieve.
             </p>
             <p>I look forward to hearing from you.</p>
+
+            <p>Ernest Lipford-Owner</p>
 
         </article>
     </div>
@@ -259,7 +224,7 @@
             <p>I like words. I don't like wasting them. I like saying things in the quickest, most efficient way possible.</p>
             <p>Cause life's too short.</p>
             <p>I'm sure you and your customers would agree.</p>
-
+            <p>Ernest Lipford-Owner</p>
         </article>
     </div>
 
@@ -268,7 +233,7 @@
     <div id="divEmail" style="display:none">
 
         <article>
-            <h1>Click on links below for email samples</h1>
+            <h3>Click on links below for email samples</h3>
 
             <div class="panel-group">
                 <div class="panel panel-default">
@@ -911,6 +876,7 @@
 
     <div id="divEmailB2B" style="display:none">
         <article>
+            <h3>Click on links below for email samples</h3>
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1341,11 +1307,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.subHead').textillate({
-                loop: true,
-                in: { effect: 'tada' },
-                out: { effect: 'flipOutY' }
-            });
+          
 
             $('.dropdown-submenu a.test').on("click", function (e) {
                 $(this).next('ul').toggle();
@@ -1363,6 +1325,7 @@
 
             $('#aboutLink').click(function () {
                 $('#main').html($('#about').html());
+                $('#about').show();
             });
 
             $('#emailB2CLink').click(function () {
